@@ -1,0 +1,67 @@
+/*
+ * Author: Sun JinYang
+ * Descript:  mtshortcut css 控制样式
+ */
+
+/* 主元素 */
+.mtui-shortcut {}
+
+.mtui-shortcut-title {
+    font-size: var(--mtui-FS);
+    font-weight: var(--mtui-FW);
+}
+
+/* items 项 */
+.mtui-shortcut .mtui-shortcut-content {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    height: auto ;
+    width: 100%;
+
+    background-color: #fff;
+    background-color: var(--mtui-BG);
+  
+}
+
+/* 快捷方式 */
+.mtui-shortcut li {
+    text-align: center;
+}
+
+/* 上面为了兼容 */
+
+.mtui-shortcut li .layui-icon,
+.mtui-shortcut li .iconfont,
+.mtui-shortcut li .mtui-icon {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 2px;
+    font-size: var(--mtui-FS-BIG);
+    background-color: #F8F8F8;
+    color: #333;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.mtui-shortcut li cite {
+    position: relative;
+    top: 2px;
+    display: block;
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: var(--mtui-FS-SM);
+}
+
+.mtui-shortcut li:hover .layui-icon,
+.mtui-shortcut li:hover .iconfont,
+.mtui-shortcut li:hover .mtui-icon
+{
+    background-color: #f2f2f2;
+}

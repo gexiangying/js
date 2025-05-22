@@ -1,0 +1,43 @@
+.mtdatetype-hearder{
+	font-size: larger;
+	justify-content: space-between;
+}
+
+
+.mtdatetype-totalRow{
+
+	justify-content: space-between;
+	border:none;
+	font-size: large;
+	margin:5px;
+    padding: 5px 10px;
+	background-color: #FAFAFA !important;
+    color: #666 !important;
+	
+}
+
+
+.mtdatetype-type-item{
+
+	border-radius: 0px !important;
+	border:1px;
+	margin:0 10px
+}
+
+.mtdatetype-type-item[checked]{
+	color:#07c160;
+	border-bottom-style:solid
+}
+
+.mtdatetype-types {
+	text-align: center;
+}
+
+.mtdatetype-showAll {
+	text-align: center;
+	line-height: 10px;
+}
+
+.mtdatetype-echarts {
+	height:380px;
+}

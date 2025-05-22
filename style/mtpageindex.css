@@ -1,0 +1,103 @@
+/*
+ * Author: Sun JinYang
+ * Descript:  mtlaytablefilter 样式文件
+ */
+
+
+.mtpageindex{
+    padding:10px 0 0;
+}
+
+.mtpageindex-bar{
+    
+}
+.mtpageindex-bar + *{
+    margin-top:5px;
+}
+
+.mtpageindex-bar > .layui-mutexbtns{
+    float:left;
+    padding:0 10px;
+}
+
+.mtpageindex-mutexbtns-date {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.mtpageindex-bar > .mtpageindex-mutexbtns-date{
+    float:left;
+    padding:0 10px;
+}
+
+.mtpageindex-mutexbtns-date input.mtpageindex-date {
+    width: 200px;
+    margin-left:5px;
+}
+
+.mtpageindex-mutexbtns-date div.mtpageindex-date {
+    margin-left:5px;
+}
+
+.mtpageindex-mutexbtns-date div.mtpageindex-date > input {
+    width: 100px;
+}
+
+.mtpageindex-bar .mtpageindex-mutexbtns-date + .mtlaytablefilter  .mtlaytablefilter-bar {
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.mtpageindex-bar .mtpageindex-mutexbtns-date + div  .mtui-filter-box {
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+
+
+
+.mtpageindex-bar .layui-mutexbtns + .mtlaytablefilter  .mtlaytablefilter-bar {
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+
+.mtpageindex-summary{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d2eafb;
+    background-color: #ecf6fd;
+    margin: 0 0 5px;
+    padding: 5px 10px;
+    align-items: center
+}
+
+.mtpageindex-summary-items{
+}
+
+.mtpageindex-summary-items .layui-icon-tips{
+    color:#1E9FFF;font-weight: bold;
+}
+
+.mtpageindex-summary-items span {
+    margin-left:10px;
+    display:inline-block;
+}
+.mtpageindex-summary-btns > *{
+    margin-right:-30px;
+    font-size: 18px;
+
+    color: #10aeff;
+    color: var(--weui-BLUE);
+}
+
+.mtpageindex-summary-btns > *:hover{
+    color: #07c160;
+    color: var(--mtui-BRAND);
+}
+
+.mtpageindex-summary-btns > *:last-child{
+    margin-right:0;
+}

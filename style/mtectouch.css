@@ -1,0 +1,113 @@
+/*初始样式*/
+
+.mtui-mtectouch{
+    position:relative;
+    width: 100%;
+    overflow: hidden;
+    height:100%
+}
+
+/* 
+.mtui-mtectouch-content{
+    position:relative;
+    width: 100%;
+    overflow: hidden;
+    height:100%;
+} */
+
+/* .mtui-mtectouch-left{ position: absolute; left:0;top:0rem; bottom:0;overflow: hidden;overflow-y:auto; height:100%}
+.mtui-mtectouch-item{ position: absolute;left:0rem;top:0rem; bottom:0;overflow: hidden;overflow-y:auto;}
+.mtui-mtectouch-item #loading{left:8rem; top:6.7rem;}
+.mtui-mtectouch-left{
+    height: auto;
+} */
+.mtui-mtectouch-left,.mtui-mtectouch-right{ position: absolute; top:0rem; bottom:0;overflow: hidden;overflow-y:auto; height:100%}
+.mtui-mtectouch-right #loading{left:8rem; top:6.7rem;}
+.mtui-mtectouch-left{
+    margin-left:0rem; 
+    left:0;
+}
+
+.mtui-mtectouch-right{
+    margin-left:0rem; 
+    right:0;
+    left:8.6rem; 
+}
+
+.mtui-mtectouch-left{background:#fff; }
+.mtui-mtectouch-left ul{margin-bottom: 3.6rem}
+.mtui-mtectouch-left .mtui-mtectouch-left-li{position:inherit;padding:1.3rem .8rem;white-space:normal;word-wrap:break-word; box-sizing: border-box;  font-size:14px; width:8.6rem; text-align: center;cursor: pointer}
+.mtui-mtectouch-left .mtui-mtectouch-left-li.layui-this{background:#F6F6F9; position:relative;color:#1CBB7F}
+.mtui-mtectouch-left .mtui-mtectouch-left-li.layui-this:before{
+    content: " "; position: absolute;display: block; width:2px; height:100%; background:#1CBB7F; top:0; left:0;
+}
+.mtui-mtectouch-item{background:#F6F6F9; position:relative; margin-left:0rem; margin-top:0rem; right:0; bottom:0;display:none;height:100%}
+.mtui-mtectouch-item.layui-show{display:unset;}
+
+
+
+
+
+
+
+
+.mtui-mtectouch-left .isLine{
+   height:0px;
+   /* font-weight: bold;
+   padding:0 .8rem;
+   width: 8.6rem;
+   background:#a5b1ac; */
+
+    /* width: 100%;
+    background-color: #a5b1ac;
+    background-size: 30px 30px;
+    transform: skewX(35deg); */
+    /* margin: 5px 0; */
+    /* box-shadow: 0 0 10px 1px #a5b1ac; */
+    /* background-color:rgba(255, 255, 255, 0.5);
+    background-color:var( --weui-TAG-TEXT-BLACK); */
+}
+
+
+.mtui-mtectouch-left .mtui-mtectouch-left-li.isEmpty{
+    
+}
+
+/* .mtui-mtectouch-left .mtui-mtectouch-left-li.isEmpty:after{
+    content: '';
+    width: 80px;
+    height: 1px;
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    margin-left: 24px;
+    margin-bottom: 10px;
+
+} */
+
+.mtui-mtectouch-item h5{font-size:1.3rem; color:#666; margin-top:1rem; margin-bottom:.4rem;}
+.mtui-mtectouch-item h5:first-child{margin-top:0;}
+.mtui-mtectouch-item ul{overflow: hidden;}
+.mtui-mtectouch-item ul li{text-align: center;}
+.mtui-mtectouch-item ul li a{display:block; position: absolute; left:.3rem; top:.7rem; bottom:.7rem; right:.3rem;}
+.mtui-mtectouch-item ul li:nth-child(3n+1) a{left:0; right:.7rem;}
+.mtui-mtectouch-item ul li:nth-child(3n) a{right:0; left: .7rem;}
+.mtui-mtectouch-item ul li span{display:block;height:2.6rem; line-height: 2.6rem; overflow: hidden; text-align: center; font-size:1.4rem}
+.mtui-mtectouch-item ul li img{width:5rem; height: auto;	}
+.mune-no-img img{display:none}
+.mune-no-img span{border:1px solid #efefef; color:#555; border-radius: 4px;}
+
+
+.mtui-scroll-hidden::-webkit-scrollbar {/*滚动条宽度设置*/
+    width: 0px;height: 0;
+}
+
+.padding-all{padding:.4rem}
+.padding-all-1{padding:1rem 1.3rem;}
+
+
+
+
+/*多个一行三个*/
+.w-3{width:33.33%;  float:left; padding:.6rem .4rem; box-sizing: border-box; position: relative;}
+.w-3:nth-child(3n+1){padding-left:0; padding-right:.8rem}
+.w-3:nth-child(3n){ padding-left: .8rem;padding-right:0;}

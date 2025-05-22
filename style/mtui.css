@@ -1,0 +1,2932 @@
+/* 
+mtui 组件样式库 借鉴了weui 、mtui 等样式 
+注意： 
+  尺寸参考 mtui-FS-*
+  类名使用 - 或者  __链接 尽量不要超过3个字符串。
+
+  存在从属关系的使用 __ 链接 例如：
+    mtui-page
+    mtui-page__hd
+    mtui-page__bd
+    mtui-page__ft 
+  没有从属的诸如：
+    mtui-FS 
+    mtui-FS-SM 
+    mtui-FS-XS 等。
+
+词汇解析如下：
+FS : font-size 
+FW : font-weight
+
+
+*/
+body {
+  --mtui-BTN-DISABLED-FONT-COLOR: rgba(0, 0, 0, 0.2);
+}
+
+body[data-weui-theme='dark'] {
+  --mtui-BTN-DISABLED-FONT-COLOR: rgba(255, 255, 255, 0.2);
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-weui-theme='light']) {
+    --mtui-BTN-DISABLED-FONT-COLOR: rgba(255, 255, 255, 0.2);
+  }
+}
+
+body {
+  --mtui-BTN-DEFAULT-BG: #f2f2f2;
+}
+
+body[data-weui-theme='dark'] {
+  --mtui-BTN-DEFAULT-BG: rgba(255, 255, 255, 0.08);
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-weui-theme='light']) {
+    --mtui-BTN-DEFAULT-BG: rgba(255, 255, 255, 0.08);
+  }
+}
+
+body {
+  --mtui-BTN-DEFAULT-COLOR: #06ae56;
+}
+
+body[data-weui-theme='dark'] {
+  --mtui-BTN-DEFAULT-COLOR: rgba(255, 255, 255, 0.8);
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-weui-theme='light']) {
+    --mtui-BTN-DEFAULT-COLOR: rgba(255, 255, 255, 0.8);
+  }
+}
+
+body {
+  --mtui-BTN-DEFAULT-ACTIVE-BG: #e6e6e6;
+}
+
+body[data-weui-theme='dark'] {
+  --mtui-BTN-DEFAULT-ACTIVE-BG: rgba(255, 255, 255, 0.126);
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-weui-theme='light']) {
+    --mtui-BTN-DEFAULT-ACTIVE-BG: rgba(255, 255, 255, 0.126);
+  }
+}
+
+
+/* 颜色变量*/
+body {
+  --mtui-BG-0: #ededed;
+  --mtui-BG-1: #f7f7f7;
+  --mtui-BG-2: #fff;
+  --mtui-BG-3: #f7f7f7;
+  --mtui-BG-4: #4c4c4c;
+  --mtui-BG-5: #fff;
+  --mtui-FG-0: rgba(0, 0, 0, 0.9);
+  --mtui-FG-HALF: rgba(0, 0, 0, 0.9);
+  --mtui-FG-1: rgba(0, 0, 0, 0.5);
+  --mtui-FG-2: rgba(0, 0, 0, 0.3);
+  --mtui-FG-3: rgba(0, 0, 0, 0.1);
+  --mtui-FG-4: #4c4c4c80;
+  --mtui-RED: #fa5151;
+  --mtui-ORANGE: #fa9d3b;
+  --mtui-YELLOW: #ffc300;
+  --mtui-GREEN: #91d300;
+  --mtui-LIGHTGREEN: #95ec69;
+  --mtui-BRAND: #07c160;
+  --mtui-BLUE: #10aeff;
+  --mtui-INDIGO: #1485ee;
+  --mtui-PURPLE: #6467f0;
+  --mtui-WHITE: #fff;
+  --mtui-LINK: #576b95;
+  --mtui-LINK-ACTIVE: rgba(87, 107, 149, 0.5);
+  --mtui-TEXTGREEN: #06ae56;
+  --mtui-FG: black;
+  --mtui-BG: white;
+  --mtui-TAG-TEXT-ORANGE: #fa9d3b;
+  --mtui-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+  --mtui-TAG-TEXT-GREEN: #06ae56;
+  --mtui-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+  --mtui-TAG-TEXT-BLUE: #10aeff;
+  --mtui-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+  --mtui-TAG-TEXT-BLACK: rgba(0, 0, 0, 0.5);
+  --mtui-TAG-BACKGROUND-BLACK: rgba(0, 0, 0, 0.05);
+  /* TODO: 其他主题下的颜色值 */
+  --mtui-PRIMARY: #666;
+
+  --mtui-BG-HOVER:rgba(16, 174, 255, 0.1);
+
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-mtui-theme='light']) {
+    --mtui-BG-0: #111111;
+    --mtui-BG-1: #1e1e1e;
+    --mtui-BG-2: #191919;
+    --mtui-BG-3: #202020;
+    --mtui-BG-4: #404040;
+    --mtui-BG-5: #2c2c2c;
+    --mtui-FG-0: rgba(255, 255, 255, 0.8);
+    --mtui-FG-HALF: rgba(255, 255, 255, 0.6);
+    --mtui-FG-1: rgba(255, 255, 255, 0.5);
+    --mtui-FG-2: rgba(255, 255, 255, 0.3);
+    --mtui-FG-3: rgba(255, 255, 255, 0.05);
+    --mtui-FG-4: #40404080;
+    --mtui-RED: #fa5151;
+    --mtui-ORANGE: #c87d2f;
+    --mtui-YELLOW: #cc9c00;
+    --mtui-GREEN: #74a800;
+    --mtui-LIGHTGREEN: #3eb575;
+    --mtui-BRAND: #07c160;
+    --mtui-BLUE: #10aeff;
+    --mtui-INDIGO: #1196ff;
+    --mtui-PURPLE: #8183ff;
+    --mtui-WHITE: rgba(255, 255, 255, 0.8);
+    --mtui-LINK: #7d90a9;
+    --mtui-LINK-ACTIVE: rgba(125, 144, 169, 0.5);
+    --mtui-TEXTGREEN: #259c5c;
+    --mtui-FG: white;
+    --mtui-BG: black;
+    --mtui-TAG-TEXT-ORANGE: rgba(250, 157, 59, 0.6);
+    --mtui-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+    --mtui-TAG-TEXT-GREEN: rgba(6, 174, 86, 0.6);
+    --mtui-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+    --mtui-TAG-TEXT-BLUE: rgba(16, 174, 255, 0.6);
+    --mtui-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+    --mtui-TAG-TEXT-BLACK: rgba(255, 255, 255, 0.5);
+    --mtui-TAG-BACKGROUND-BLACK: rgba(255, 255, 255, 0.05);
+  }
+}
+
+body[data-mtui-theme='dark'] {
+  --mtui-BG-0: #111111;
+  --mtui-BG-1: #1e1e1e;
+  --mtui-BG-2: #191919;
+  --mtui-BG-3: #202020;
+  --mtui-BG-4: #404040;
+  --mtui-BG-5: #2c2c2c;
+  --mtui-FG-0: rgba(255, 255, 255, 0.8);
+  --mtui-FG-HALF: rgba(255, 255, 255, 0.6);
+  --mtui-FG-1: rgba(255, 255, 255, 0.5);
+  --mtui-FG-2: rgba(255, 255, 255, 0.3);
+  --mtui-FG-3: rgba(255, 255, 255, 0.05);
+  --mtui-FG-4: #40404080;
+  --mtui-RED: #fa5151;
+  --mtui-ORANGE: #c87d2f;
+  --mtui-YELLOW: #cc9c00;
+  --mtui-GREEN: #74a800;
+  --mtui-LIGHTGREEN: #3eb575;
+  --mtui-BRAND: #07c160;
+  --mtui-BLUE: #10aeff;
+  --mtui-INDIGO: #1196ff;
+  --mtui-PURPLE: #8183ff;
+  --mtui-WHITE: rgba(255, 255, 255, 0.8);
+  --mtui-LINK: #7d90a9;
+  --mtui-LINK-ACTIVE: rgba(125, 144, 169, 0.5);
+  --mtui-TEXTGREEN: #259c5c;
+  --mtui-FG: white;
+  --mtui-BG: black;
+  --mtui-TAG-TEXT-ORANGE: rgba(250, 157, 59, 0.6);
+  --mtui-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+  --mtui-TAG-TEXT-GREEN: rgba(6, 174, 86, 0.6);
+  --mtui-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+  --mtui-TAG-TEXT-BLUE: rgba(16, 174, 255, 0.6);
+  --mtui-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+  --mtui-TAG-TEXT-BLACK: rgba(255, 255, 255, 0.5);
+  --mtui-TAG-BACKGROUND-BLACK: rgba(255, 255, 255, 0.05);
+
+
+}
+
+/* 字体统一主题 */
+body {
+  /* 字体大小 font-size  从 12px 开始 +4 +6 +8 +10 ...*/
+  --mtui-FS:  22px ; 
+  /* 有些浏览器最小支持12 */
+  --mtui-FS-XS:  12px; 
+  --mtui-FS-SM:  16px ;
+  --mtui-FS-BIG:  30px ;
+  --mtui-FS-LARGE: 40px ;
+  /* 字体粗细 font-weight */
+  --mtui-FW:bold;
+}
+
+
+/*  ===============font size================================================ */
+/* font-size 设定 目的是使得页面内容排版大小统一 分移动端尺寸sm 和 pc端尺寸 normal ,大屏尺寸 large.默认是pc端尺寸*/
+
+/* 正常 */
+.mtui-fs {
+  font-size: var(--mtui-FS)
+}
+
+/* 超小 */
+.mtui-fs-xs {
+  font-size: var(--mtui-FS-XS)
+}
+
+/* 小 */
+.mtui-fs-sm {
+  font-size: var(--mtui-FS-SM)
+}
+
+/* 大 */
+.mtui-fs-big {
+  font-size: var(--mtui-FS-BIG)
+}
+
+/* 巨大 */
+.mtui-fs-lg {
+  font-size: var(--mtui-FS-LARGE)
+}
+
+/*  ===============font weight================================================ */
+/* mtui-fw  */
+.mtui-fw {
+  font-weight: var(--mtui-FW)
+}
+/*  ===============width================================================ */
+.mtui-searchbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  padding: 0 0 6px;
+  border-bottom: 1px solid #dfe4ed;
+  position: relative;
+  height: 50px;
+  background-color: #fff;
+  /* 两端对齐 */
+  justify-content: space-between; 
+  /* 交叉轴上的默认对齐方式 */
+  align-items: center;
+
+  position: relative;
+  /* overflow-x: auto;
+  overflow-y:hidden; */;
+
+}
+
+
+
+.mtui-searchbar .mtui-searchbar__form{
+  /* 指定了 flex 元素的收缩规则 flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值*/
+  flex-shrink: 1;
+  /* 设置 hidden 会导致 select 下拉框被遮挡 */
+  /* overflow: hidden; */
+  background: #fff;
+  height: 100%;
+  border: 1px solid #fff;
+  /* min-width: 75%; */
+  max-width: 70%;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  min-width: min-content;
+  /* max-width:1042px; */
+}
+
+/* .mtui-searchbar .mtui-searchbar__form{
+  flex-shrink: 1;
+  overflow: hidden;
+  background: #fff;
+  height: 100%;
+  border: 1px solid #fff;
+  border-top: none;
+  box-shadow: none;
+  border-left: none;
+ 
+  min-width: 75%;
+} */
+
+.mtui-searchbar .mtui-searchbar__form.expand{
+  overflow: auto;
+  overflow-x: hidden;
+  border-color: #dfe4ed;
+  box-shadow: 3px 3px 6px -3px rgb(0 0 0 / 30%);
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height:40vh;
+  margin-top: 36vh;
+  z-index: 9999999;
+  padding:10px;
+
+  /* height: 10vh;
+  margin-top:50px;
+  padding:10px */
+}
+
+
+.mtui-searchbar .mtui-searchbar__item select{
+  /* display: inline-block; */
+  position: relative;
+}
+
+.mtui-searchbar .mtui-searchbar__item {
+  min-width: 300px;
+  display: inline-block;
+  margin-left: -10px;
+}
+
+.mtui-searchbar  .layui-form-radio{
+  margin: 6px 0px 0 0;
+}
+
+.mtui-searchbar .mtui-searchbar__toolbar{
+  padding: 0 ;
+  /* padding: 0 10px; */
+  margin-right:-10px;
+
+  padding-right: 0;
+
+  width:300px;
+  min-width: 300px;
+  text-align: right;
+
+    /* flex-shrink: 0; */
+  /* margin-top: 1px; */
+  /* flex:1 */
+}
+
+.mtui-searchbar .mtui-searchbar__toolbar  button.mtui-border-none{
+  font-size: 16px;
+  font-size: var(--mtui-FS-SM);
+  margin-left:-10px;
+}
+
+ /* 以下是为了遮挡 searchbar shirk 后需要隐藏的元素*/
+
+.mtui-searchbar +.mtui-backlog-small{
+  margin-top:5px;
+  padding:0;
+}
+
+.mtui-searchbar-line ~ div  {
+  /* margin-top:-10px; */
+  z-index:200;
+  background-color: #fff;
+}
+
+
+
+/*  ===============summary================================================ */
+/* summary */
+.mtui-summary {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.mtui-summary .mtui-backlog-body p cite {
+  font-style: normal;
+  font-size: 22px;
+  font-size: var(--mtui-FS);
+
+  color: #10aeff;
+  color: var(--weui-BLUE);
+}
+
+
+.mtui-summary-line.mtui-table-line{
+  padding-bottom: 10px;
+}
+
+.mtui-summary-line  .mtui-summary {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0 0 5px;
+  position: relative;
+  height: 60px;
+  background-color: #fff;
+  /* 两端对齐 */
+  justify-content: space-between; 
+  /* 交叉轴上的默认对齐方式 */
+  align-items: center;
+  position: relative;
+}
+
+.mtui-summary .mtui-summary__items{
+  /* 指定了 flex 元素的收缩规则 flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，其收缩的大小是依据 flex-shrink 的值*/
+  flex-shrink: 1;
+  height: 100%;
+  border: 1px solid #fff;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+
+}
+
+.mtui-summary .mtui-summary__item {
+  min-width: 270px;
+  flex:1;
+  display: inline-block;
+  padding:5px 10px;
+  margin-top:5px;
+  background-color: #f7f7f7;
+  background-color: var(--mtui-BG-3);
+  color: #999;
+  border-radius: 2px;
+  transition: all .3s;
+  -webkit-transition: all .3s
+}
+
+.mtui-summary__item h3{
+  font-size: 12px;
+  font-size: var(--mtui-FS-XS);
+}
+
+
+.mtui-summary__item p cite {
+  font-style: normal;
+  font-size: 22px;
+  font-size: var(--mtui-FS);
+  color: #10aeff;
+  color: var(--weui-BLUE);
+}
+
+
+
+.mtui-summary__item:hover {
+  /* background-color: #f2f2f2; color: #888; */
+  background-color: #ededed;
+  background-color: var(--mtui-BG-0);
+}
+
+/* .mtui-summary-line .mtui-summary-item:first-child{
+  margin-left:0px
+}
+.mtui-summary-line .mtui-summary-item{
+  margin-left:5px
+} */
+
+/* .mtui-summary-line .mtui-backlog-small .mtui-backlog-body{
+  padding: 5px;
+} */
+
+.mtui-table-line .layui-table-view{
+  margin:0px;
+}
+/*  ===============mtui-fg 文本 前景色样式 ================================================ */
+/* 主题控制区 控制不同类型的颜色*/
+.mtui-fg-normal {
+  color: #1196ff;
+  color: var(--mtui-INDIGO);
+}
+
+.mtui-fg-default {
+  color: #07c160;
+  color: var(--mtui-BRAND);
+}
+
+
+.mtui-fg-primary {
+  color: #666;
+  color: var(--mtui-PRIMARY);
+}
+
+
+.mtui-fg-warning {
+  color: #cc9c00;
+  color: var(--mtui-YELLOW);
+}
+
+.mtui-fg-warm {
+  color: #cc9c00;
+  color: var(--mtui-YELLOW);
+}
+
+.mtui-fg-danger {
+  color: #fa5151;
+  color: var(--mtui-RED);
+}
+
+.mtui-fg-move {
+  color: #c87d2f;
+  color: var(--mtui-ORANGE);
+}
+
+
+
+.mtui-fg-step1 {
+  color: #ff8000;
+}
+
+.mtui-fg-step2 {
+  color: #4da6ff;
+}
+
+.mtui-fg-step3 {
+  color: #ff3333;
+}
+
+.mtui-fg-step4 {
+  color: #0040ff;
+}
+
+.mtui-fg-step5 {
+  color: #8000ff;
+}
+
+.mtui-fg-step6 {
+  color: #ff00bf;
+}
+
+.mtui-fg-step7 {
+  color: #ff0000;
+}
+
+
+
+/*  ===============mtui-bg 文本 前景色样式 ================================================ */
+/* 主题控制区 控制不同类型的颜色*/
+.mtui-bg-normal {
+  background-color: #1196ff !important;
+  background-color: var(--mtui-INDIGO) !important;
+  color:#FFF !important;
+  color:var(--mtui-WHITE) !important
+}
+
+.mtui-bg-default {
+  background-color: #07c160 !important;
+  background-color: var(--mtui-BRAND) !important;
+  color:#FFF !important;
+  color:var(--mtui-WHITE) !important
+}
+
+.mtui-bg-primary {
+  background-color: #666 !important;
+  background-color: var(--mtui-PRIMARY) !important;
+  color:#FFF !important;
+  color:var(--mtui-WHITE) !important
+}
+
+.mtui-bg-warning,.mtui-bg-warm {
+  background-color: #cc9c00 !important;
+  background-color: var(--mtui-YELLOW) !important;
+  color:#FFF !important;
+  color:var(--mtui-WHITE) !important
+}
+
+.mtui-bg-danger {
+  background-color: #fa5151 !important;
+  background-color: var(--mtui-RED) !important;
+  color:#FFF !important;
+  color:var(--mtui-WHITE) !important
+}
+
+
+
+/*  ===============mtui-link 链接类样式================================================ */
+.mtui-link {
+  color: #1196ff;
+  color: var(--mtui-INDIGO);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mtui-link[lay-href],.mtui-bottom-line {
+  padding-bottom:2px; border-bottom:1px solid;
+  width:fit-content;
+}
+
+.mtui-link:hover {
+  color: #07c160;
+  color: var(--mtui-BRAND);
+}
+
+.mtui-link>i {
+  margin-top: 10px !important;
+  font-size: 12px;
+}
+
+
+.mtui-link-danger {
+  color: #fa5151;
+  color: var(--mtui-RED);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mtui-link-danger:hover {
+  color: #07c160;
+  color: var(--mtui-BRAND);
+}
+
+/* 采用 layui input 的高度 */
+.mtui-size-input {
+  height: 38px;
+  line-height: 1.3;
+}
+
+/*  ===============mtui-row================================================ */
+/* 布局 仿 layui 行列式结构*/
+.mtui-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box
+}
+
+.mtui-fluid {
+  padding: 10px
+}
+
+.mtui-fluid .mtui-card {
+  border-radius: 10px;
+  padding: 20px 5px 5px;
+}
+
+.mtui-fluid button {
+  border-radius: 10px;
+}
+
+/* 统一控制间距 */
+.mtui-fluid > .mtui-card > .mtui-row > div {
+  margin-top:-15px;
+}
+
+
+
+.mtui-row:after,
+.mtui-row:before {
+  content: "";
+  display: block;
+  clear: both
+}
+
+.mtui-col-lg1,
+.mtui-col-lg10,
+.mtui-col-lg11,
+.mtui-col-lg12,
+.mtui-col-lg2,
+.mtui-col-lg3,
+.mtui-col-lg4,
+.mtui-col-lg5,
+.mtui-col-lg6,
+.mtui-col-lg7,
+.mtui-col-lg8,
+.mtui-col-lg9,
+.mtui-col-md1,
+.mtui-col-md10,
+.mtui-col-md11,
+.mtui-col-md12,
+.mtui-col-md2,
+.mtui-col-md3,
+.mtui-col-md4,
+.mtui-col-md5,
+.mtui-col-md6,
+.mtui-col-md7,
+.mtui-col-md8,
+.mtui-col-md9,
+.mtui-col-sm1,
+.mtui-col-sm10,
+.mtui-col-sm11,
+.mtui-col-sm12,
+.mtui-col-sm2,
+.mtui-col-sm3,
+.mtui-col-sm4,
+.mtui-col-sm5,
+.mtui-col-sm6,
+.mtui-col-sm7,
+.mtui-col-sm8,
+.mtui-col-sm9,
+.mtui-col-xs1,
+.mtui-col-xs10,
+.mtui-col-xs11,
+.mtui-col-xs12,
+.mtui-col-xs2,
+.mtui-col-xs3,
+.mtui-col-xs4,
+.mtui-col-xs5,
+.mtui-col-xs6,
+.mtui-col-xs7,
+.mtui-col-xs8,
+.mtui-col-xs9 {
+  position: relative;
+  display: block;
+  box-sizing: border-box
+}
+
+.mtui-col-xs1,
+.mtui-col-xs10,
+.mtui-col-xs11,
+.mtui-col-xs12,
+.mtui-col-xs2,
+.mtui-col-xs3,
+.mtui-col-xs4,
+.mtui-col-xs5,
+.mtui-col-xs6,
+.mtui-col-xs7,
+.mtui-col-xs8,
+.mtui-col-xs9 {
+  float: left
+}
+
+.mtui-col-xs1 {
+  width: 8.33333333%
+}
+
+.mtui-col-xs2 {
+  width: 16.66666667%
+}
+
+.mtui-col-xs3 {
+  width: 25%
+}
+
+.mtui-col-xs4 {
+  width: 33.33333333%
+}
+
+.mtui-col-xs5 {
+  width: 41.66666667%
+}
+
+.mtui-col-xs6 {
+  width: 50%
+}
+
+.mtui-col-xs7 {
+  width: 58.33333333%
+}
+
+.mtui-col-xs8 {
+  width: 66.66666667%
+}
+
+.mtui-col-xs9 {
+  width: 75%
+}
+
+.mtui-col-xs10 {
+  width: 83.33333333%
+}
+
+.mtui-col-xs11 {
+  width: 91.66666667%
+}
+
+.mtui-col-xs12 {
+  width: 100%
+}
+
+.mtui-col-xs-offset1 {
+  margin-left: 8.33333333%
+}
+
+.mtui-col-xs-offset2 {
+  margin-left: 16.66666667%
+}
+
+.mtui-col-xs-offset3 {
+  margin-left: 25%
+}
+
+.mtui-col-xs-offset4 {
+  margin-left: 33.33333333%
+}
+
+.mtui-col-xs-offset5 {
+  margin-left: 41.66666667%
+}
+
+.mtui-col-xs-offset6 {
+  margin-left: 50%
+}
+
+.mtui-col-xs-offset7 {
+  margin-left: 58.33333333%
+}
+
+.mtui-col-xs-offset8 {
+  margin-left: 66.66666667%
+}
+
+.mtui-col-xs-offset9 {
+  margin-left: 75%
+}
+
+.mtui-col-xs-offset10 {
+  margin-left: 83.33333333%
+}
+
+.mtui-col-xs-offset11 {
+  margin-left: 91.66666667%
+}
+
+.mtui-col-xs-offset12 {
+  margin-left: 100%
+}
+
+@media screen and (max-width:768px) {
+  .mtui-hide-xs {
+    display: none !important
+  }
+
+  .mtui-show-xs-block {
+    display: block !important
+  }
+
+  .mtui-show-xs-inline {
+    display: inline !important
+  }
+
+  .mtui-show-xs-inline-block {
+    display: inline-block !important
+  }
+}
+
+@media screen and (min-width:768px) {
+  .mtui-container {
+    width: 750px
+  }
+
+  .mtui-hide-sm {
+    display: none !important
+  }
+
+  .mtui-show-sm-block {
+    display: block !important
+  }
+
+  .mtui-show-sm-inline {
+    display: inline !important
+  }
+
+  .mtui-show-sm-inline-block {
+    display: inline-block !important
+  }
+
+  .mtui-col-sm1,
+  .mtui-col-sm10,
+  .mtui-col-sm11,
+  .mtui-col-sm12,
+  .mtui-col-sm2,
+  .mtui-col-sm3,
+  .mtui-col-sm4,
+  .mtui-col-sm5,
+  .mtui-col-sm6,
+  .mtui-col-sm7,
+  .mtui-col-sm8,
+  .mtui-col-sm9 {
+    float: left
+  }
+
+  .mtui-col-sm1 {
+    width: 8.33333333%
+  }
+
+  .mtui-col-sm2 {
+    width: 16.66666667%
+  }
+
+  .mtui-col-sm3 {
+    width: 25%
+  }
+
+  .mtui-col-sm4 {
+    width: 33.33333333%
+  }
+
+  .mtui-col-sm5 {
+    width: 41.66666667%
+  }
+
+  .mtui-col-sm6 {
+    width: 50%
+  }
+
+  .mtui-col-sm7 {
+    width: 58.33333333%
+  }
+
+  .mtui-col-sm8 {
+    width: 66.66666667%
+  }
+
+  .mtui-col-sm9 {
+    width: 75%
+  }
+
+  .mtui-col-sm10 {
+    width: 83.33333333%
+  }
+
+  .mtui-col-sm11 {
+    width: 91.66666667%
+  }
+
+  .mtui-col-sm12 {
+    width: 100%
+  }
+
+  .mtui-col-sm-offset1 {
+    margin-left: 8.33333333%
+  }
+
+  .mtui-col-sm-offset2 {
+    margin-left: 16.66666667%
+  }
+
+  .mtui-col-sm-offset3 {
+    margin-left: 25%
+  }
+
+  .mtui-col-sm-offset4 {
+    margin-left: 33.33333333%
+  }
+
+  .mtui-col-sm-offset5 {
+    margin-left: 41.66666667%
+  }
+
+  .mtui-col-sm-offset6 {
+    margin-left: 50%
+  }
+
+  .mtui-col-sm-offset7 {
+    margin-left: 58.33333333%
+  }
+
+  .mtui-col-sm-offset8 {
+    margin-left: 66.66666667%
+  }
+
+  .mtui-col-sm-offset9 {
+    margin-left: 75%
+  }
+
+  .mtui-col-sm-offset10 {
+    margin-left: 83.33333333%
+  }
+
+  .mtui-col-sm-offset11 {
+    margin-left: 91.66666667%
+  }
+
+  .mtui-col-sm-offset12 {
+    margin-left: 100%
+  }
+}
+
+@media screen and (min-width:992px) {
+  .mtui-container {
+    width: 970px
+  }
+
+  .mtui-hide-md {
+    display: none !important
+  }
+
+  .mtui-show-md-block {
+    display: block !important
+  }
+
+  .mtui-show-md-inline {
+    display: inline !important
+  }
+
+  .mtui-show-md-inline-block {
+    display: inline-block !important
+  }
+
+  .mtui-col-md1,
+  .mtui-col-md10,
+  .mtui-col-md11,
+  .mtui-col-md12,
+  .mtui-col-md2,
+  .mtui-col-md3,
+  .mtui-col-md4,
+  .mtui-col-md5,
+  .mtui-col-md6,
+  .mtui-col-md7,
+  .mtui-col-md8,
+  .mtui-col-md9 {
+    float: left
+  }
+
+  .mtui-col-md1 {
+    width: 8.33333333%
+  }
+
+  .mtui-col-md2 {
+    width: 16.66666667%
+  }
+
+  .mtui-col-md3 {
+    width: 25%
+  }
+
+  .mtui-col-md4 {
+    width: 33.33333333%
+  }
+
+  .mtui-col-md5 {
+    width: 41.66666667%
+  }
+
+  .mtui-col-md6 {
+    width: 50%
+  }
+
+  .mtui-col-md7 {
+    width: 58.33333333%
+  }
+
+  .mtui-col-md8 {
+    width: 66.66666667%
+  }
+
+  .mtui-col-md9 {
+    width: 75%
+  }
+
+  .mtui-col-md10 {
+    width: 83.33333333%
+  }
+
+  .mtui-col-md11 {
+    width: 91.66666667%
+  }
+
+  .mtui-col-md12 {
+    width: 100%
+  }
+
+  .mtui-col-md-offset1 {
+    margin-left: 8.33333333%
+  }
+
+  .mtui-col-md-offset2 {
+    margin-left: 16.66666667%
+  }
+
+  .mtui-col-md-offset3 {
+    margin-left: 25%
+  }
+
+  .mtui-col-md-offset4 {
+    margin-left: 33.33333333%
+  }
+
+  .mtui-col-md-offset5 {
+    margin-left: 41.66666667%
+  }
+
+  .mtui-col-md-offset6 {
+    margin-left: 50%
+  }
+
+  .mtui-col-md-offset7 {
+    margin-left: 58.33333333%
+  }
+
+  .mtui-col-md-offset8 {
+    margin-left: 66.66666667%
+  }
+
+  .mtui-col-md-offset9 {
+    margin-left: 75%
+  }
+
+  .mtui-col-md-offset10 {
+    margin-left: 83.33333333%
+  }
+
+  .mtui-col-md-offset11 {
+    margin-left: 91.66666667%
+  }
+
+  .mtui-col-md-offset12 {
+    margin-left: 100%
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .mtui-container {
+    width: 1170px
+  }
+
+  .mtui-hide-lg {
+    display: none !important
+  }
+
+  .mtui-show-lg-block {
+    display: block !important
+  }
+
+  .mtui-show-lg-inline {
+    display: inline !important
+  }
+
+  .mtui-show-lg-inline-block {
+    display: inline-block !important
+  }
+
+  .mtui-col-lg1,
+  .mtui-col-lg10,
+  .mtui-col-lg11,
+  .mtui-col-lg12,
+  .mtui-col-lg2,
+  .mtui-col-lg3,
+  .mtui-col-lg4,
+  .mtui-col-lg5,
+  .mtui-col-lg6,
+  .mtui-col-lg7,
+  .mtui-col-lg8,
+  .mtui-col-lg9 {
+    float: left
+  }
+
+  .mtui-col-lg1 {
+    width: 8.33333333%
+  }
+
+  .mtui-col-lg2 {
+    width: 16.66666667%
+  }
+
+  .mtui-col-lg3 {
+    width: 25%
+  }
+
+  .mtui-col-lg4 {
+    width: 33.33333333%
+  }
+
+  .mtui-col-lg5 {
+    width: 41.66666667%
+  }
+
+  .mtui-col-lg6 {
+    width: 50%
+  }
+
+  .mtui-col-lg7 {
+    width: 58.33333333%
+  }
+
+  .mtui-col-lg8 {
+    width: 66.66666667%
+  }
+
+  .mtui-col-lg9 {
+    width: 75%
+  }
+
+  .mtui-col-lg10 {
+    width: 83.33333333%
+  }
+
+  .mtui-col-lg11 {
+    width: 91.66666667%
+  }
+
+  .mtui-col-lg12 {
+    width: 100%
+  }
+
+  .mtui-col-lg-offset1 {
+    margin-left: 8.33333333%
+  }
+
+  .mtui-col-lg-offset2 {
+    margin-left: 16.66666667%
+  }
+
+  .mtui-col-lg-offset3 {
+    margin-left: 25%
+  }
+
+  .mtui-col-lg-offset4 {
+    margin-left: 33.33333333%
+  }
+
+  .mtui-col-lg-offset5 {
+    margin-left: 41.66666667%
+  }
+
+  .mtui-col-lg-offset6 {
+    margin-left: 50%
+  }
+
+  .mtui-col-lg-offset7 {
+    margin-left: 58.33333333%
+  }
+
+  .mtui-col-lg-offset8 {
+    margin-left: 66.66666667%
+  }
+
+  .mtui-col-lg-offset9 {
+    margin-left: 75%
+  }
+
+  .mtui-col-lg-offset10 {
+    margin-left: 83.33333333%
+  }
+
+  .mtui-col-lg-offset11 {
+    margin-left: 91.66666667%
+  }
+
+  .mtui-col-lg-offset12 {
+    margin-left: 100%
+  }
+}
+
+.mtui-col-space1 {
+  margin: -.5px
+}
+
+.mtui-col-space1>* {
+  padding: .5px
+}
+
+.mtui-col-space2 {
+  margin: -1px
+}
+
+.mtui-col-space2>* {
+  padding: 1px
+}
+
+.mtui-col-space4 {
+  margin: -2px
+}
+
+.mtui-col-space4>* {
+  padding: 2px
+}
+
+.mtui-col-space5 {
+  margin: -2.5px
+}
+
+.mtui-col-space5>* {
+  padding: 2.5px
+}
+
+.mtui-col-space6 {
+  margin: -3px
+}
+
+.mtui-col-space6>* {
+  padding: 3px
+}
+
+.mtui-col-space8 {
+  margin: -4px
+}
+
+.mtui-col-space8>* {
+  padding: 4px
+}
+
+.mtui-col-space10 {
+  margin: -5px
+}
+
+.mtui-col-space10>* {
+  padding: 5px
+}
+
+.mtui-col-space12 {
+  margin: -6px
+}
+
+.mtui-col-space12>* {
+  padding: 6px
+}
+
+.mtui-col-space14 {
+  margin: -7px
+}
+
+.mtui-col-space14>* {
+  padding: 7px
+}
+
+.mtui-col-space15 {
+  margin: -7.5px
+}
+
+.mtui-col-space15>* {
+  padding: 7.5px
+}
+
+.mtui-col-space16 {
+  margin: -8px
+}
+
+.mtui-col-space16>* {
+  padding: 8px
+}
+
+.mtui-col-space18 {
+  margin: -9px
+}
+
+.mtui-col-space18>* {
+  padding: 9px
+}
+
+.mtui-col-space20 {
+  margin: -10px
+}
+
+.mtui-col-space20>* {
+  padding: 10px
+}
+
+.mtui-col-space22 {
+  margin: -11px
+}
+
+.mtui-col-space22>* {
+  padding: 11px
+}
+
+.mtui-col-space24 {
+  margin: -12px
+}
+
+.mtui-col-space24>* {
+  padding: 12px
+}
+
+.mtui-col-space25 {
+  margin: -12.5px
+}
+
+.mtui-col-space25>* {
+  padding: 12.5px
+}
+
+.mtui-col-space26 {
+  margin: -13px
+}
+
+.mtui-col-space26>* {
+  padding: 13px
+}
+
+.mtui-col-space28 {
+  margin: -14px
+}
+
+.mtui-col-space28>* {
+  padding: 14px
+}
+
+.mtui-col-space30 {
+  margin: -15px
+}
+
+.mtui-col-space30>* {
+  padding: 15px
+}
+
+
+
+.mtui-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.mtui-flex > div:not(:first-child) {
+  margin-left:10px
+}
+.mtui-flex-item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+/* 这个是常用样式  子元素间 中间空白 */
+.mtui-flex-between {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mtui-flex-between>* {
+  margin-right: 5px;
+}
+
+.mtui-flex-between>*:last-child {
+  margin-right: 0;
+}
+
+
+
+/*  ===============页面================================================ */
+.mtui-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.mtui-page__padding {
+  padding: 15px;
+}
+
+@media screen and (max-width:768px) {
+  .mtui-page{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .mtui-page__padding {
+    padding: 10px;
+  }
+}
+
+
+.mtui-popup {
+  margin:-20px;
+}
+
+/* mtui-page 的不同主题 控制内部的间距等样式 */
+
+.mtui-tips-line{
+
+}
+
+.mtui-tips-line .mtui-tips {
+  margin: 0 0 -10px;
+  padding: 10px;
+}
+
+
+/* 详情页中只读的信息项 */
+.mtui-page-item {
+  margin-right: 10px;
+  display: inline-block;
+  min-width: 200px;
+}
+
+
+/* 单独显示状态的样式 */
+.mtui-page-item.mtui-page-status {
+  margin-right:-20px
+}
+
+
+.mtui-page-item .mtui-label{
+  /* float: left;
+  display: block;
+  width: 80px;
+  text-align: right; */
+  padding: 0 5px;
+}
+
+.mtui-page button {
+  border-radius: 0;
+}
+
+
+/*  ===============mtui-card================================================ */
+
+
+.mtui-card {
+  margin-bottom: 15px;
+  border-radius: 2px;
+  background-color: #fff;
+  background-color: var(--mtui-WHITE);
+  /* box-shadow: 0 1px 2px 0  rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px 0 var(--mtui-FG-1); */
+  border-radius: 10px;
+}
+
+.mtui-card__bd,
+.mtui-card__hd {
+  position: relative;
+}
+
+.mtui-card:last-child {
+  margin-bottom: 0
+}
+
+.mtui-card__hd {
+  height: 42px;
+  line-height: 42px;
+
+  padding: 0 15px;
+  border-bottom: 1px solid #f7f7f7;
+  border-bottom: 1px solid var(--mtui-BG-1);
+  color: #333;
+  /* color: #333; */
+  border-radius: 2px 2px 0 0;
+
+  font-size: var(--mtui-FS);
+  /* font-weight: var(--mtui-FW); */
+
+}
+
+.mtui-card__bd {
+  padding: 5px;
+  line-height: 24px
+}
+
+/*  ===============mtui-card================================================ */
+
+
+.mtui-input-line{
+  height: auto;
+  line-height: auto;
+  padding:5px 10px;
+ 
+}
+
+.mtui-input-line  .layui-input-inline  {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* .mtui-card__bd__link {
+  line-height:30px;
+  text-align: center;
+  background-color: #ededed;
+  background-color: var(--mtui-BG-0);
+  content: " ";
+  width: 12px;
+  height: 24px;
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  background-color: currentColor;
+  color: rgba(0,0,0,0.3);
+  color: var(--weui-FG-2);
+  -webkit-mask-image: url(data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2.454%206.58l1.06-1.06%205.78%205.779a.996.996%200%20010%201.413l-5.78%205.779-1.06-1.061%205.425-5.425-5.425-5.424z%22%20fill%3D%22%23B2B2B2%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E);
+  mask-image: url(data:image/svg+xml,%3Csvg%20width%3D%2212%22%20height%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2.454%206.58l1.06-1.06%205.78%205.779a.996.996%200%20010%201.413l-5.78%205.779-1.06-1.061%205.425-5.425-5.425-5.424z%22%20fill%3D%22%23B2B2B2%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -12px;
+} */
+
+
+
+
+.mtui-card .mtui-tab {
+  margin: 0;
+  /* background-color:#f7f7f7;
+    background-color:var(--mtui-BG-1); */
+}
+
+
+.mtui-card .layui-tab-title {
+  color: #333;
+  background-color: #FAFAFA;
+}
+
+
+.mtui-card .layui-tab {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  border-color: #eee;
+  margin: 0;
+}
+
+
+.mtui-card .layui-tab-content {
+  padding: 5px;
+}
+
+
+.mtui-card__bd>.layui-row {
+  padding-bottom: 0;
+}
+
+
+/*  ===============tab================================================ */
+.mtui-tab {
+  margin: 0;
+  /* padding:5px; */
+  overflow-x: hidden;
+}
+
+
+.mtui-tab:after {
+  height: auto;
+}
+
+/* .mtui-tab[overflow]>.mtui-tab-items {
+    overflow: hidden
+} */
+/* TODO:待解决 pc端 列表过多不显示 不滑动问题 */
+.mtui-tab-items {
+  position: relative;
+  left: 0;
+  height: 40px;
+  white-space: nowrap;
+  font-size: 0;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  border: none;
+  overflow: hidden;
+  overflow-x: auto;
+
+  -webkit-user-select: none;
+  user-select: none;
+
+
+  /* background-color:#fff;
+    background-color:var(--mtui-WHITE) */
+}
+
+/*滚动条宽度设置*/
+.mtui-tab-items::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.mtui-tab-items .mtui-tab-item {
+  display: inline-block;
+  *display: inline;
+  /* *zoom: 1; */
+  vertical-align: middle;
+  font-size: 14px;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  position: relative;
+  line-height: 40px;
+  min-width: 65px;
+  padding: 0 15px;
+  text-align: center;
+  cursor: pointer
+}
+
+.mtui-tab-item.mtui-this {
+  color: #07c160;
+  color: var(--weui-BRAND);
+}
+
+.mtui-tab-item.mtui-this:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  pointer-events: none;
+  border-bottom: 1px solid #07c160;
+  border-bottom: 1px solid var(--weui-BRAND);
+  z-index: 2;
+}
+
+
+.mtui-tab-center .mtui-tab-items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-justify-content: center;
+  justify-content: center;
+
+}
+
+.mtui-tab-panel {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mtui-tab-items~.mtui-tab-panel {
+  margin-top: 5px;
+
+}
+
+
+
+.mtui-tab__padding {
+  padding:10px;
+}
+
+.mtui-tab__padding .mtui-tips-toolbar {
+  padding-right:10px
+}
+/*  ===============btn================================================ */
+/* 按钮  */
+.mtui-btn-primary__bg {
+  background-color: rgb(242, 242, 242);
+}
+
+
+
+
+button.mtui-border-none {
+  cursor: pointer;
+}
+
+
+button.mtui-border-none.mtui-fg-normal:hover {
+  color: #07c160;
+  color: var(--mtui-BRAND);
+}
+
+/* 按钮组 */
+.mtui-btn-group {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0
+}
+
+.mtui-btn-group .mtui-btn {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  border-left: 1px solid rgba(255, 255, 255, .5);
+  border-radius: 0
+}
+
+.mtui-btn-group .mtui-border-none {
+  border-left: none;
+}
+
+.mtui-btn-group .mtui-btn-primary {
+  border-left: none
+}
+
+.mtui-btn-group .mtui-btn-primary:hover {
+  border-color: #d2d2d2;
+  color: #009688
+}
+
+.mtui-btn-group .mtui-btn:first-child {
+  border-left: none;
+  border-radius: 2px 0 0 2px
+}
+
+.mtui-btn-group .mtui-btn-primary:first-child {
+  border-left: 1px solid #d2d2d2
+}
+
+.mtui-btn-group .mtui-btn:last-child {
+  border-radius: 0 2px 2px 0
+}
+
+.mtui-btn-group .mtui-btn+.mtui-btn {
+  margin-left: 0
+}
+
+.mtui-btn-group+.mtui-btn-group {
+  margin-left: 10px
+}
+
+.mtui-btn-group .mtui-btn-group-item {
+  margin: 0 5px;
+  padding: 0 5px;
+  font-size: 18px;
+}
+
+
+.mtui-btn-group .mtui-btn-group-item:hover {
+  /* color: #576b95;
+    color: var(--mtui-LINK); */
+
+  border-color: #d2d2d2;
+  color: #009688
+}
+
+.mtui-btn {
+  position: relative;
+  display: block;
+  width: 184px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 24px;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1.41176471;
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+
+}
+
+/* .mtui-btn:hover {
+        opacity: .8;
+        filter: alpha(opacity=80);
+        color: #fff
+
+        color: #06ae56;
+        color: var(--mtui-BTN-DEFAULT-COLOR);
+        background-color: #f2f2f2;
+        background-color: var(--mtui-BTN-DEFAULT-BG);
+    } */
+
+.mtui-btn-block {
+  width: auto;
+}
+
+.mtui-btn-inline {
+  display: inline-block;
+}
+
+.mtui-btn-default {
+  color: #06ae56;
+  color: var(--mtui-BTN-DEFAULT-COLOR);
+  background-color: #f2f2f2;
+  background-color: var(--mtui-BTN-DEFAULT-BG);
+}
+
+.mtui-btn-default:not(.mtui-btn-disabled):visited {
+  color: #06ae56;
+  color: var(--mtui-BTN-DEFAULT-COLOR);
+}
+
+.mtui-btn-default:not(.mtui-btn-disabled):active {
+  background-color: #e6e6e6;
+  background-color: var(--mtui-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.mtui-btn-primary {
+  background-color: #07c160;
+  background-color: var(--weui-BRAND);
+}
+
+.mtui-btn-primary:not(.mtui-btn-disabled):visited {
+  color: #fff;
+}
+
+.mtui-btn-primary:not(.mtui-btn-disabled):active {
+  background-color: #06ae56;
+  background-color: var(--weui-TAG-TEXT-GREEN);
+}
+
+.mtui-btn-warn {
+  color: #fa5151;
+  color: var(--mtui-RED);
+  background-color: #f2f2f2;
+  background-color: var(--mtui-BTN-DEFAULT-BG);
+}
+
+.mtui-btn-warn:not(.mtui-btn-disabled):visited {
+  color: #fa5151;
+  color: var(--mtui-RED);
+}
+
+.mtui-btn-warn:not(.mtui-btn-disabled):active {
+  background-color: #e6e6e6;
+  background-color: var(--mtui-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.mtui-btn-disabled {
+  color: rgba(0, 0, 0, 0.2);
+  color: var(--mtui-BTN-DISABLED-FONT-COLOR);
+  background-color: #f2f2f2;
+  background-color: var(--mtui-BTN-DEFAULT-BG);
+}
+
+.mtui-btn-loading .weui-loading {
+  margin: -0.2em 0.34em 0 0;
+}
+
+.mtui-btn-loading .weui-primary-loading {
+  margin: -0.2em 8px 0 0;
+  vertical-align: middle;
+}
+
+.mtui-btn-loading.mtui-btn-primary {
+  background-color: #06ae56;
+  background-color: var(--weui-TAG-TEXT-GREEN);
+  color: #fff;
+  color: var(--weui-WHITE);
+}
+
+.mtui-btn-loading.mtui-btn-default {
+  background-color: #e6e6e6;
+  background-color: var(--mtui-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.mtui-btn-loading.mtui-btn-warn {
+  background-color: #e6e6e6;
+  background-color: var(--mtui-BTN-DEFAULT-ACTIVE-BG);
+}
+
+
+button.mtui-btn,
+input.mtui-btn {
+  border-width: 0;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+button.mtui-btn:focus,
+input.mtui-btn:focus {
+  outline: 0;
+}
+
+button.mtui-btn-inline,
+input.mtui-btn-inline,
+button.mtui-btn-mini,
+input.mtui-btn-mini {
+  width: auto;
+}
+
+
+.mtui-btn-mini {
+  display: inline-block;
+  width: auto;
+  padding: 0 0.75em;
+  line-height: 2;
+  font-size: 16px;
+}
+
+
+
+.mtui-btn:not(.mtui-btn-mini)+.mtui-btn:not(.mtui-btn-mini) {
+  margin-top: 16px;
+}
+
+.mtui-btn.mtui-btn-inline+.mtui-btn.mtui-btn-inline {
+  margin-top: auto;
+  margin-left: 16px;
+}
+
+.mtui-btn-area {
+  margin: 48px 16px 8px;
+}
+
+.mtui-btn-area-inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.mtui-btn-area-inline .mtui-btn {
+  margin-top: auto;
+  margin-right: 16px;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.mtui-btn-area-inline .mtui-btn:last-child {
+  margin-right: 0;
+}
+
+.mtui-btn-reset {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.mtui-btn-icon {
+  font-size: 0;
+}
+
+.mtui-btn-icon:active [class*="weui-icon-"] {
+  color: rgba(0, 0, 0, 0.5);
+  color: var(--weui-FG-1);
+}
+
+
+.mtui-btn-submit {
+  font-size: 20px;
+  font-weight: bold;
+  width: 300px;
+}
+
+*[mtadmin-event-click]:hover{
+  /* color:#07c160 */
+  /* transform: scale(0.9); */
+
+}
+
+*[mtadmin-event-click].mtui-fg-normal:hover{
+  color: #06ae56;
+  color: var(--mtui-BTN-DEFAULT-COLOR);
+}
+
+
+
+/*  ===============form================================================ */
+
+
+/*  ===============table================================================ */
+.mtui-table__tool {
+}
+.mtui-table__tool > button {
+  height: 24px;
+  line-height: 24px;
+  padding: 0 10px;
+  font-size: 12px;
+  font-size: var(--mtui-FS-XS);
+  margin-bottom:5px;
+}
+
+.mtui-table__tool > button:not(:first-child) {
+  margin-left:5px;
+}
+
+.mtui-table__fixheight {
+  height: 330px;
+}
+
+/*  ===============td================================================ */
+/* td 带编辑属性的表格cell 追加右下三角形图标 */
+td[data-edit="text"]:after {
+  display: block;
+  content: " ";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 6px solid #2d86e8;
+  border-left: 6px solid transparent;
+}
+
+/*  ===============text================================================ */
+/* 文本  */
+.mtui-edit {
+  cursor: pointer;
+  color: #10aeff;
+  color: var(--weui-BLUE);
+
+  text-decoration: underline;
+}
+
+
+/*  ===============mtui-move================================================ */
+.mtui-move {
+  color: #c87d2f;
+  color: var(--mtui-ORANGE);
+  cursor: move;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+/*  ===============mtui-input================================================ */
+/* 输入框样式 */
+.mtui-input {
+  height: 38px;
+  line-height: 1.3;
+  line-height: 38px\9;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #fff;
+  color: rgba(0, 0, 0, .85);
+  border-radius: 2px;
+}
+
+/* 输入框如果旁边跟则 link 的字段 为了保持居中效果 */
+.mtui-input+.mtui-link {
+  margin-top: 4px;
+}
+
+.mtui-input+span {
+  margin: 5px 10px 0;
+}
+
+
+
+.mtui-input~span {
+  margin: 5px 0 0 5px;
+}
+
+
+.mtui-input-word {
+  margin: 5px 5px 0;
+}
+
+.mtui-table-input {
+  min-width: 100px;
+  max-width: 200px;
+}
+
+
+.mtui-input-fuzzyquery{
+  width:250px
+}
+
+.mtui-input[wid100]{
+  width:100px;
+}
+
+
+
+
+.mtui-input[wid60]{
+  width:60px;
+}
+
+
+/*  ===============mtui-Numericaldisplay================================================ */
+/* 三角形的数据显示功能。底部数据由竖线分隔 */
+.mtui-Numericaldisplay {
+  background-color: #ededed;
+  background-color: var(--mtui-BG-0);
+}
+
+.mtui-Numericaldisplay .mtui-Numericaldisplay-bd {
+  margin-top: 20px;
+}
+
+.mtui-Numericaldisplay-hd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.mtui-Numericaldisplay-bd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.mtui-Numericaldisplay-item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+}
+
+.mtui-Numericaldisplay-title {
+  color: rgba(0, 0, 0, 0.3);
+  /* color: var(--mtui-FG-2); */
+  font-size: 14px;
+  line-height: 1.4;
+  padding-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mtui-Numericaldisplay-value {
+  font-size: larger;
+}
+
+/*  ===============mtui-classifiednav================================================ */
+/* 移动端的分类导航 */
+.mtui-classifiednav {
+  margin: 0;
+  padding: 5px 10px;
+  background: #f9f9f9;
+}
+
+.mtui-classifiednav-bar {
+  height: 3rem;
+  line-height: 3rem;
+}
+
+
+.mtui-classifiednav .swiper-slide {
+  width: auto;
+  padding: 0 10px;
+}
+
+
+.mtui-classifiednav-bar .mtui-classifiednav-nav {
+  /* padding:5px  10px 0 0; */
+  /* margin:10px  10px 0 0; */
+  font-size: 14px;
+  background: transparent;
+
+}
+
+.mtui-classifiednav-nav .mtui-this {
+  /* color:rgba(255,72,145,1); */
+  /* color:#07c160;
+    background: ; */
+
+  background-color: #07C160;
+  color: #fff;
+  border-radius: 20px;
+
+
+}
+
+.mtui-classifiednav-content {
+
+  height: 100%;
+  width: 100%;
+  /* width: 100%;
+    height: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    margin-top: 0; */
+
+}
+
+.mtui-classifiednav-content .mtui-classifiednav-item {
+  display: none;
+}
+
+.mtui-classifiednav-content .mtui-classifiednav-item.mtui-show {
+  display: unset;
+}
+
+.mtui-classifiednav-slid {
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+/*  ===============mtcategory================================================ */
+/* 分类导航组件 */
+.mtcategory {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mtcategory:after {
+  height: auto;
+}
+
+.mtcategory .mtcategory-main {
+  height: inherit;
+}
+
+.mtcategory .mtcategory-main:after {
+  /* height:auto; */
+}
+
+.mtcategory .mtcategory-content-item {
+  height: inherit;
+}
+
+.mtcategory .mtcategory-content-item:after {
+  /* height:auto; */
+}
+
+
+/*  ===============提示================================================ */
+.mtui-tip {
+  color: #1196ff;
+  color: var(--mtui-INDIGO);
+  cursor: pointer;
+}
+
+.mtui-tip-number {
+  color: #1196ff;
+  color: var(--mtui-INDIGO);
+  font-weight: bold;
+}
+
+
+
+/*  ===============杂项================================================ */
+/* 竖线样式 */
+.mtui-fly-mid {
+  display: inline-block;
+  width: 1px;
+  margin: 0 10px;
+  vertical-align: middle;
+  background-color: #e2e2e2;
+}
+
+/* 隐藏 */
+.mtui-hide {
+  display: none;
+}
+
+.mtui-show {
+  display: block;
+}
+
+.mtui-this {}
+
+
+
+.mtui-none {
+  text-align: center;
+  line-height: 26px;
+  padding: 30px 15px;
+  text-align: center;
+  color: #999;
+}
+
+/* inline block */
+.mtui-inblock {
+  display: inline-block;
+}
+
+
+
+
+
+/*  ===============popup================================================ */
+
+.mtui-popup-view{
+  display:flex;
+  height:100%;
+}
+
+.mtui-popup-view > .mb-page{
+  flex:1;
+}
+
+/*  ===============scrollbar================================================ */
+
+/* 不显示滚动条 */
+.mtui-scroll-hidden::-webkit-scrollbar {
+  /*滚动条宽度设置*/
+  width: 0px;
+  height: 0;
+}
+
+/* 仅y轴滚动 注意需要高度配合 */
+.mtui-scroll-y {
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.mtui-scroll-x{
+  overflow: hidden;overflow-x:auto;white-space: nowrap;
+  /* background-color: #ffffff40; */
+  
+}
+.mtui-scroll-x::-webkit-scrollbar{
+  display: none;
+}
+
+/*  ===============mtui-tips================================================ */
+.mtui-tips{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #d2eafb;
+  background-color: #ecf6fd;
+  margin: 0 0 5px;
+  /* padding: 5px 10px; */
+  padding: 10px;
+  align-items: center
+}
+
+.mtui-tips-summary{
+}
+
+.mtui-tips-summary .layui-icon-tips{
+  color:#1E9FFF;font-weight: bold;
+}
+
+.mtui-tips-summary span {
+  margin-left:10px;
+  display:inline-block;
+}
+.mtui-tips-toolbar > *{
+  margin-right:-30px;
+  font-size: 18px;
+
+  color: #10aeff;
+  color: var(--weui-BLUE);
+}
+
+.mtui-tips-toolbar > *:hover{
+  color: #07c160;
+  color: var(--mtui-BRAND);
+}
+
+.mtui-tips-toolbar > *:last-child{
+  margin-right:-10px;
+}
+
+
+/*  ===============mtui-shortcut ================================================ */
+/* 主元素 */
+.mtui-shortcut {}
+
+.mtui-shortcut-title {
+    font-size: var(--mtui-FS);
+    font-weight: var(--mtui-FW);
+}
+
+/* items 项 */
+.mtui-shortcut .mtui-shortcut-content {
+    position: relative;
+    left: 0;
+    top: 0;
+
+    height: auto ;
+    width: 100%;
+
+    background-color: #fff;
+    background-color: var(--mtui-BG);
+  
+}
+
+/* 快捷方式 */
+.mtui-shortcut li {
+    text-align: center;
+}
+
+/* 上面为了兼容 */
+
+.mtui-shortcut li .layui-icon,
+.mtui-shortcut li .iconfont,
+.mtui-shortcut li .mtui-icon {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 2px;
+    font-size: var(--mtui-FS-BIG);
+    background-color: #F8F8F8;
+    color: #333;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.mtui-shortcut li cite {
+    position: relative;
+    top: 2px;
+    display: block;
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: var(--mtui-FS-SM);
+}
+
+.mtui-shortcut li:hover .layui-icon,
+.mtui-shortcut li:hover .iconfont,
+.mtui-shortcut li:hover .mtui-icon
+{
+    background-color: #f2f2f2;
+}
+
+/*  ===============mtui-backlog================================================ */
+/* 主元素 */
+.mtui-backlog {
+}
+
+.mtui-backlog-title {
+  font-size: var(--mtui-FS);
+  font-weight: var(--mtui-FW);
+}
+
+/* items 项 */
+.mtui-backlog .mtui-backlog-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  background-color: var(--mtui-BG);
+}
+
+/* 待办事项 */
+.mtui-backlog .mtui-backlog-body {
+  display: block;
+  padding: 5px 15px 15px;
+  background-color: #f7f7f7;
+  background-color: var(--mtui-BG-3);
+  color: #999;
+  border-radius: 2px;
+
+  transition: all .3s;
+  -webkit-transition: all .3s
+}
+
+
+.mtui-backlog-body h3{
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-size: var(--mtui-FS-SM);
+}
+
+.mtui-backlog-body p cite {
+  font-style: normal;
+  font-size: 30px;
+  font-size: var(--mtui-FS-BIG);
+
+  color: #10aeff;
+  color: var(--weui-BLUE);
+}
+
+.mtui-backlog-body:hover {
+  /* background-color: #f2f2f2; color: #888; */
+
+  background-color: #ededed;
+  background-color: var(--mtui-BG-0);
+  /* color: #4c4c4c;
+  color: var(--mtui-FG-4) */
+
+  color: #06ae56;
+  color: var(--mtui-BTN-DEFAULT-COLOR);
+}
+
+.mtui-backlog-small  .mtui-backlog-body{
+  padding: 5px 15px;
+}
+
+.mtui-backlog-small  .mtui-backlog-body h3{
+  padding-bottom: 5px;
+  /* font-size: 12px;
+  font-size: var(--mtui-FS-XS); */
+}
+
+.mtui-backlog-small .mtui-backlog-body p cite{
+  font-style: normal;
+  font-size: 22px;
+  font-size: var(--mtui-FS);
+
+  color: #10aeff;
+  color: var(--weui-BLUE);
+}
+
+/*  ===============mtui-summary-box================================================ */
+/* 移动端 summary 信息盒子 */
+
+.mtui-summarybox {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  height: auto;
+  width: 100%;
+
+  background-color: #fff;
+  background-color: var(--mtui-BG);
+
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  text-align: right;
+  border-radius: 0px;
+  font-size: 16px;
+  font-size: var(--mtui-FS-SM); 
+}
+
+.mtui-summarybox__body{
+  display: block;
+  padding: 5px 10px;
+  background-color: #f7f7f7;
+  background-color: var(--mtui-BG-3);
+
+  color: #999;
+
+  border-radius: 2px;
+  /* margin: 5px; */
+  transition: all .3s;
+  -webkit-transition: all .3s
+}
+
+.mtui-summarybox__body:hover{
+  background-color: #ededed;
+  background-color: var(--mtui-BG-0);
+    /* color: #06ae56;
+    color: var(--mtui-BTN-DEFAULT-COLOR); */
+ }
+
+ .mtui-summarybox__item {
+  overflow: hidden;
+ }
+
+.mtui-summarybox__label {
+  float: left;
+  margin-right: 1em;
+  min-width: 4em;
+  color: rgba(0,0,0,0.5);
+  color: var(--weui-FG-1);
+  text-align: justify;
+  text-align-last: justify;
+}
+
+.mtui-summarybox__value {
+  font-style: normal;
+  color: #10aeff;
+  color: var(--weui-BLUE);
+  display: block;
+  overflow: hidden;
+  word-break: normal;
+  word-wrap: break-word;
+}
+
+.mtui-summarybox .mtui-unit{
+  font-size: 14px;
+}
+/*  ===============mtui-padding================================================ */
+.mtui-padding-r10{
+  padding-right:10px
+}
+
+.mtui-padding-r20{
+  padding-right:20px
+}
+
+.mtui-row.mtui-padding-normal > .mtui-toolbar-line {
+  padding-top: 15px;
+  padding-bottom: 0;
+  margin-bottom:-5px;
+}
+
+/* .mtui-row.mtui-padding-normal .mtui-searchbar label.layui-form-label:first{
+  margin-left:-20px;
+} */
+
+.mtui-row.mtui-padding-normal > div{
+  /* padding:10px 15px; */
+  padding:10px;
+}
+
+.mtui-row.mtui-padding-normal .mtui-searchbar-line{
+  padding:15px 15px 0;
+  margin-left:-5px;
+}
+
+.mtui-padding-card {
+  padding:10px;
+}
+
+
+@media screen and (max-width:768px) {
+  
+  .mtui-row.mtui-padding-normal > div{
+    padding:5px;
+  }
+
+  .mtui-padding-card {
+    padding:5px;
+  }
+
+}
+
+
+/*  ===============mtui-search================================================ */
+
+.mtui-search-bar{}
+  
+
+.mtui-search-bar + *{
+  margin-top:5px;
+}
+
+.mtui-search-bar > .layui-mutexbtns{
+  float:left;
+  padding:0 10px;
+}
+
+.mtui-search-mutexbtns-date {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.mtui-search-bar > .mtui-search-mutexbtns-date{
+  float:left;
+  padding:0 10px;
+}
+
+.mtui-search-mutexbtns-date input.mtui-search-date {
+  width: 200px;
+  margin-left:5px;
+}
+
+.mtui-search-mutexbtns-date div.mtui-search-date {
+  margin-left:5px;
+}
+
+.mtui-search-mutexbtns-date div.mtui-search-date > input {
+  width: 100px;
+}
+
+.mtui-search-bar .mtui-search-mutexbtns-date + .mtlaytablefilter  .mtlaytablefilter-bar {
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.mtui-search-bar .mtui-search-mutexbtns-date + div  .mtui-filter-box {
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.mtui-search-bar .layui-mutexbtns + .mtlaytablefilter  .mtlaytablefilter-bar {
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+
+/*  ===============icon================================================ */
+
+.mtui-first {
+  color:#fa5151;
+  color:var(--mtui-RED);
+  
+  font-size: 20px;
+  font-size: var(--mtui-FS);
+  margin-left:-2px
+
+}
+
+.mtui-second {
+  color:#ffc300;
+  color:var(--mtui-YELLOW);
+  font-size: 18px;
+}
+
+.mtui-third {
+  color:#95ec69;
+  color:var(--mtui-LIGHTGREEN);
+
+  font-size: 16px;
+}
+
+
+/*  ===============tool================================================ */
+
+.mtui-showmore{
+  color: #1196ff;
+  color: var(--mtui-INDIGO);
+  font-size: 16px;
+  font-size: var(--mtui-FS-SM);
+  text-align: center;
+  padding:5px 0 ;
+  cursor: pointer;
+}
+
+.mtui-showmore:hover{
+  color: #07c160;
+  color: var(--mtui-BRAND);
+  background-color: var(--mtui-BG-HOVER);
+  background-color: rgba(16, 174, 255, 0.1);
+  cursor: pointer;
+}
+
+/* gotop 按钮 */
+.mtui-gotop {
+  position: absolute !important;
+}
+
+/* gotop 指向的容器 */
+/* .mtui-gotop-box {
+  overflow-y: auto;
+  height: 100%;
+} */
+
+.mtui-unit {
+  font-size: 14px;
+  /* font-size: var(--mtui-FS-XS); */
+}
+
+
+/* 消息盒子 没有数据时的容器样式 */
+.mtui-msgbox-none {
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  padding: auto;
+}
+
+
+.mtui-none {
+  line-height: 40px;
+  text-align: center;
+  align-items: center;
+}
+
+/*  ===============flow================================================ */
+.mtui-flow-item {
+  height: auto; position: relative;
+  margin-bottom:10px;
+}
+
+/*  ===============border  ================================================ */
+
+/* border-none */
+.mtui-border-none {
+  border: none
+}
+
+input.mtui-border-none {
+  border: none;
+  
+}
+
+input.mtui-border-none[readonly] {
+  border: none;
+  overflow:hidden;
+  background: transparent;
+  cursor:unset;
+}
+
+/*  ===============wid 定义宽度================================================ */
+.mtui-wid__date{
+  width:100px;
+}
+
+*[wid100] {
+  width:100px;
+}
+
+
+/* mtui-header */
+/* .mtui-header{
+  margin: auto 0;
+  font-weight: bold;
+} */
+
+/*  ===============mtui-header 通用头部样式，卡片的头================================================ */
+.mtui-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  margin:5px;
+}
+
+
+.mtui-header__title{
+  font-size: 22px;
+  font-size: var(--mtui-FS);
+  margin:auto 0;
+}
+
+
+.mtui-header__right{
+  font-size: 22px;
+  font-size: var(--mtui-FS);
+  margin:auto 0;
+}
+
+.mtui-header__tools{
+ 
+}
+
+.mtui-header__input {
+  width:200px;
+  margin-right: 10px;
+}
+
+
+/*  ===============mtui-word 通用头部样式，卡片的头================================================ */
+.mtui-word {
+
+}
+.mtui-word__aux{
+  color: #999 !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important
+}
+
+
+.mtui-word__aux + p {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  font-size: var(--mtui-FS);
+  margin:5px 0;
+}
+/* .mtui-word__aux-value{
+  color: #999 !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important
+} */
+
+/*  ===============mtui-transfer 穿梭框 样式调整 ================================================ */
+.mtui-transfer{
+  text-align: center;
+}

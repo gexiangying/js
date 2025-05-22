@@ -1,0 +1,15 @@
+/*
+ * Author: Sun JinYang
+ * Descript:  mtnavitems css 控制样式
+ */
+
+.mtui-navitems{
+
+}
+
+/* 列表 */
+.mtui-navitems-list{
+    position: relative;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}

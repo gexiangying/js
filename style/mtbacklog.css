@@ -1,0 +1,72 @@
+/*
+ * Author: Sun JinYang
+ * Descript:  mtshortcut css 控制样式
+ */
+
+/* 主元素 */
+.mtui-backlog {
+  
+}
+
+.mtui-backlog-title {
+  font-size: var(--mtui-FS);
+  font-weight: var(--mtui-FW);
+}
+
+/* items 项 */
+.mtui-backlog .mtui-backlog-content {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  height: auto;
+  width: 100%;
+
+  background-color: #fff;
+  background-color: var(--mtui-BG);
+}
+
+/* 待办事项 */
+.mtui-backlog .mtui-backlog-body {
+  display: block;
+  padding: 5px 15px 15px;
+  background-color: #f7f7f7;
+  background-color: var(--mtui-BG-3);
+
+ 
+
+  color: #999;
+ 
+  border-radius: 2px;
+  /* margin: 5px; */
+
+  transition: all .3s;
+  -webkit-transition: all .3s
+}
+
+
+.mtui-backlog-body h3{
+  padding-bottom: 10px;
+  font-size: 16px
+  font-size: var(--mtui-FS-SM);
+}
+
+.mtui-backlog-body p cite {
+  font-style: normal;
+  font-size: var(--mtui-FS-BIG);
+
+  color: #10aeff;
+  color: var(--weui-BLUE);
+}
+
+.mtui-backlog-body:hover {
+  /* background-color: #f2f2f2; color: #888; */
+
+  background-color: #ededed;
+  background-color: var(--mtui-BG-0);
+  /* color: #4c4c4c;
+  color: var(--mtui-FG-4) */
+
+  color: #06ae56;
+  color: var(--mtui-BTN-DEFAULT-COLOR);
+}

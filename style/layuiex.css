@@ -1,0 +1,56 @@
+/* layui 框架下 的页面微调 */
+
+
+/* layui 框架下 layui-body 内的页面间距 */
+
+.layuiex-laybody-page {
+    padding: 10px !important;
+    /* 不强制 会被其他样式冲掉 不起效果 */
+}
+
+
+/* layui card 的header 微调样式 */
+
+.layuiex-laycard-header {
+    font-size: large;
+}
+
+
+/* card 内 微调 */
+
+.layui-card-header>.layuiex-laycard-header-line {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    font-size: large;
+    justify-content: space-between;
+}
+
+
+/* card title 显示效果 */
+
+.layuiex-laycard-title {
+    font-weight: bold;
+}
+
+
+/* card 底部显示更多 */
+
+.layuiex-laycard-showmore {
+    text-align: center;
+    line-height: 10px;
+    padding: 5px;
+    color: #07c160;
+}
+
+
+/* card 内 table 下的显示更多 */
+
+.layuiex-laycard-tableshowmore {
+    margin-top: 10px
+}
+
+.card-sale__amount {}
+
+
+/* layui 框架下 layui-body 内的页面间距 */

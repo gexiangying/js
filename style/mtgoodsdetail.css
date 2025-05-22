@@ -1,0 +1,44 @@
+/*
+ * Author: Sun JinYang
+ * Descript: 
+ */
+
+
+.mtgoodsdetail-summary{
+}
+
+.mtgoodsdetail-warning-container {
+}
+
+.mtgoodsdetail-warning {
+    display: none;
+}
+
+.mtgoodsdetail-warning.isWarning  {
+    display: unset;
+    padding:auto 5px;
+    font-size: 14px;
+}
+
+/* navbar */
+.mtgoodsdetail-navbar__item {
+   
+    background-color: #f7f7f7;
+    background-color: var(--weui-BG-1);
+}
+
+.mtgoodsdetail-navbar__item.this {
+    background-color: #07c160;
+    background-color: var(--weui-BRAND);
+    color: #fff;
+    color: var(--weui-WHITE);
+}
+
+
+.mtgoodsdetail-tab__panel  {
+    display: none;
+}
+
+.mtgoodsdetail-tab__panel.show  {
+    display: unset;
+}

@@ -1,0 +1,75 @@
+
+/* .layui-mutexbtns {
+} */
+
+/* 定义容器中按钮组容器样式*/
+.layui-mutexbtns-group {
+    vertical-align: middle;
+    display:inline-block;
+    font-size: 0
+}
+
+/* 定义容器中按钮样式 不要间距*/
+.layui-mutexbtns-group .layui-btn{
+    margin-left:0!important;
+    margin-right:0!important;
+    padding:0 10px;
+    /* border-radius: 0!important ; */
+}
+
+
+.layui-mutexbtns-group .layui-btn:hover{
+   background: #dddddd;
+}
+
+/* .layui-mutexbtns .layui-mutexbtns-item[lay-border="all"]{
+
+} */
+
+/* 定义容器中具体的按钮 鼠标划过的显示样式*/
+.layui-mutexbtns-group .layui-mutexbtns-item:hover {
+    border-color: #d2d2d2;
+    color: #009688
+}
+
+.layui-mutexbtns-item{
+    border-radius: 10px;
+}
+
+/* 定义容器中按钮的属性lay-border 的值不同时显示的边框样式 */
+.layui-mutexbtns .layui-mutexbtns-item[lay-border="lr"]{
+    border-style:none solid; 
+
+}
+.layui-mutexbtns .layui-mutexbtns-item[lay-border="l"]{
+    border-style:none none none solid;
+}
+.layui-mutexbtns .layui-mutexbtns-item[lay-border="r"]{
+    border-style:none solid none none; 
+}
+.layui-mutexbtns .layui-mutexbtns-item[lay-border="tb"]{
+    border-style:solid none solid; 
+}
+.layui-mutexbtns .layui-mutexbtns-item[lay-border="t"]{
+    border-style:solid none none; 
+}
+.layui-mutexbtns .layui-mutexbtns-item[lay-border="b"]{
+    border-style:none none solid; 
+}
+
+.layui-mutexbtns .layui-mutexbtns-item[lay-border="none"]{
+    border-style:none; 
+
+}
+
+/* 定义容器中带有 layui-this 的样式  */
+.layui-mutexbtns .layui-this{
+   background-color: #07C160;
+   color:#fff
+}
+
+/* 定义容器中带有 layui-this 类的鼠标划过行为  */
+.layui-mutexbtns .layui-this:hover{
+    background-color: #07C160;
+    color:#FFFF66
+}

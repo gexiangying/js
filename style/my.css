@@ -1,0 +1,985 @@
+/*
+ * Author: Sun JinYang
+ * Descript:  自定义样式内容css 
+ 以css属性和值的类则直接用-号链接
+
+ layui 样式的修改则使用layui 默认的class
+ 特殊的样式 会有自己的样式名前缀
+ 剩下的会议 my 为开头
+ */
+
+.display-none {
+    display: none;
+}
+
+.color-brown,
+.my-form-required,
+.my-form__required,
+.myform-required {
+    color: #FF5722;
+    font-weight: bold;
+}
+
+.div-vertical>p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left
+}
+
+.div-vertical>p>span {
+    display: block
+}
+
+
+/* 文字禁止选择 */
+
+.user-select-none,
+.my-text-noselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+
+/* border */
+
+.btn-border-none,
+.btn-noborder-style {
+    border: none;
+    color: cornflowerblue;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.my-a__btn:hover,
+.btn-border-none:hover,
+.btn-noborder-style:hover {
+    color: darkseagreen;
+}
+
+.my-border__none {
+    border: none;
+    color: cornflowerblue;
+}
+
+
+/*
+
+/* div 居中设置 子div */
+
+.my-div-center div {
+    margin: 0 auto
+}
+
+
+/* myfilter */
+
+
+/* div 居中设置 父div */
+
+.myfilter-form,
+.myfilter-parent,
+.text-align-center,
+.my-div-center {
+    text-align: center
+}
+
+.myfilter-fuzzysearch,
+.fsearch {
+    display: flex;
+    display: -webkit-flex;
+    margin: 5px auto;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.myfilter-fuzzysearch-box,
+.fsearch-box {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.fsearch-input,
+.myfilter-fuzzysearch-input {
+    min-width: 300px;
+    display: inline
+}
+
+.myfilter-fuzzysearch,
+.fsearch {
+    display: flex;
+    display: -webkit-flex;
+    margin: 0px auto;
+    max-width: 800px;
+}
+
+.myfilter-btn-group,
+.fsearch-btn-group {
+    align-items: center;
+    flex: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.myfilter-btn-search-advanced,
+.myfilter-btn-display {
+    border: none;
+    color: cornflowerblue;
+    font-size: 18px;
+    padding: 0 0 0 5px;
+}
+
+
+/* 颜色 ... */
+
+.color-darkseagreen,
+.myfilter-btn-search-advanced:hover {
+    color: darkseagreen;
+}
+
+
+/* 边框有10px的圆角 ... */
+
+.border-radius-10,
+.myfilter-btn-radius,
+.myfilter-btn-group button {
+    border-radius: 10px;
+}
+
+
+/* 超过隐藏 文本溢出显示 ... */
+
+.myfilter-desc,
+.my-text__desc {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    /* display: inline-block; */
+}
+
+
+/* 左间距0 */
+
+.margin-left-0,
+.myfilter-fuzzysearch-block {
+    margin-left: 0px;
+}
+
+
+/* 水平方向间距10px */
+
+.margin-h-10,
+.myfilter-advanced-items {
+    margin: 0 10px;
+}
+
+
+/*tablemultiline*/
+
+/* .tablemultiline .layui-table thead tr,
+.tablemultiline .layui-table[lay-even] tr:nth-child(even) {
+
+    background-color:rgba(87, 107, 149, 0.5);
+    color: #fff;
+}
+
+.layui-table[lay-even] tr:nth-child(even) {
+    background-color:rgba(87, 107, 149, 0.5);
+    color: #fff;
+}
+
+.layui-table thead tr {
+    background-color:rgba(87, 107, 149, 0.5);
+    color: #fff;
+} */
+
+.layui-table thead tr,
+.layui-table[lay-even] thead tr,
+.layui-table[lay-even] thead tr:nth-child(even){
+    background-color:rgba(87, 107, 149, 0.5);
+    color:#f7f7f7; 
+}
+
+
+.layui-table-sort .layui-table-sort-asc {
+    border-top-color: #f7f7f7;
+    border-bottom-color: #f7f7f7;
+}
+
+.layui-table-sort .layui-table-sort-desc {
+    border-top-color: #f7f7f7;
+    border-bottom-color: #f7f7f7;
+}
+
+
+.layui-table-sort[lay-sort=desc] .layui-table-sort-desc {
+    border-top-color: #fa5151;
+}
+
+.layui-table-sort[lay-sort=asc] .layui-table-sort-asc {
+    border-bottom-color: #fa5151;
+}
+
+
+.layui-table tbody tr:hover,
+.layui-table[lay-even] tbody tr:hover,
+.layui-table[lay-even] tbody tr:nth-child(even):hover{
+    /* background-color:rgba(87, 107, 149, 0.2); */
+    background-color:rgba(87, 107, 149, 0.3);
+
+    /* color:#f7f7f7; */
+}
+
+
+
+
+.layui-table[lay-even] tbody tr:nth-child(even) {
+    background-color: rgba(16, 174, 255, 0.1)
+}
+
+
+/* cell 内select 弹层别遮挡问题 */
+
+.layui-table-cell {
+    overflow: visible !important;
+}
+
+.tablemultiline .layui-table-cell {
+    height: auto !important;
+    white-space: normal;
+    word-wrap: break-word;
+    min-height: 25px;
+}
+
+.tablemultiline .tool-item {
+    margin: 0;
+    text-align: left;
+}
+
+.tablemultiline .tool-item>a {
+    border: none;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    color: #1E9FFF
+}
+
+.tablemultiline a.disabled {
+    border: none;
+    color: rgb(218, 218, 218);
+}
+
+.tablemultiline .layui-table-body.layui-table-main {
+    overflow-y: auto !important;
+}
+
+.layui-fluid .layui-card {
+    border-radius: 10px;
+}
+
+.layui-fluid button {
+    border-radius: 10px;
+}
+
+.vertical-btns>button {
+    display: block;
+    text-align: left;
+    margin: 5px 0 0 10px;
+    border: none !important;
+    cursor: pointer;
+    background-color: transparent;
+    color: #108ee9;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.vertical-btns>button:hover {
+    background-color: transparent;
+    color: #07C160
+}
+
+.vertical-btns .theme-danger {
+    background-color: transparent;
+    color: #FF5722
+}
+
+.vertical-btns .theme-danger:hover {
+    background-color: transparent;
+    color: #07C160
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-18 {
+    font-size: 18px;
+}
+
+.primary-none-border {
+    color: #1E9FFF;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 5px;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.primary-none-border:hover {
+    background-color: transparent;
+    color: #07C160
+}
+
+.primary-none-border-danger {
+    color: #FF5722;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.primary-none-border-warning {
+    color: #FFB800;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.primary-none-border-danger:hover {
+    background-color: transparent;
+    color: #07C160
+}
+
+.my-footer {
+    width: 100%;
+    /* width:calc(100% - var(--menuInWidth));    */
+    /* left:var(--menuInWidth); */
+    right: 0;
+    bottom: 0;
+    background: #fbfbfb;
+    color: #98c4da;
+    z-index: 1000;
+    overflow: hidden;
+    padding: 10px 0;
+    height: 30px;
+    position: fixed;
+}
+
+.layui-footer-submitBtns {
+    font-size: 30px !important;
+    padding: 5px 20px 0px !important;
+    margin: 0 !important;
+    line-height: 30px !important;
+    text-align: right !important;
+}
+
+.table-checks {
+    border: none;
+    background-color: transparent
+}
+
+
+/* 处理弹层 内容过多时自动出现滚动条 */
+
+.layui-layer-page .layui-layer-content {
+    position: relative;
+    overflow: auto !important;
+    /* overflow: visible; */
+}
+
+
+/* .layui-form-selected{
+	overflow: visible;
+} */
+
+
+/* 处理 弹层中select 被遮挡 */
+
+.layui-form-select dl {
+    max-height: 200px;
+}
+
+
+/* .layui-layer .layui-layer-content {
+  overflow:visible !important;
+} */
+
+.layui-form-select dd {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    white-space: nowrap;
+    max-width: 60vw;
+}
+
+
+/* cell 内select 与单元格间距的调整 */
+
+td .layui-form-select {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.layui-table-body {
+    /* overflow: visible !important; */
+}
+
+
+/* 过滤 */
+
+.filterBar {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    margin-bottom: 5px
+}
+
+.filterBar>div {
+    min-width: 100px;
+    margin-top: 5px;
+    margin-left: 5px
+}
+
+.filterBar .filterBar-items {
+    flex: 1;
+    text-align: center;
+    min-width: 550px;
+    margin-right: 200px
+}
+
+.filterBar .filterBar-Keyword {
+    width: 300px;
+    display: inline
+}
+
+.filterBar .filterBar-btns {
+    display: inline-block !important;
+    text-align: left !important;
+    min-width: 350px !important;
+}
+
+
+/* .filterBar .filterBar-btns .filterBar-btn{
+
+}
+
+.filterBar .filterBar-btns .filterBar-btn-filter{
+
+}
+.filterBar .filterBar-btns .filterBar-btn-clear{
+
+}
+
+.filterBar .filterBar-btns .filterBar-btn-more{
+
+} */
+
+.filterBar-mutexbtns-date {
+    width: 200px
+}
+
+.filterAdvanced {
+    display: none;
+    margin-right: 20px;
+}
+
+.vertical-container {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.vertical-container>div {
+    flex: 1;
+    text-align: center;
+}
+
+.card-padding {
+    padding: 5px !important;
+}
+
+
+/* serchbar */
+
+.searchBar {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 5px;
+}
+
+.searchBar>div {
+    margin-left: 5px;
+    /* 控制 input date 与 按钮的间距5px; */
+    min-width: 100px;
+    margin-top: 5px;
+}
+
+.searchBar .search {
+    flex: 1;
+    text-align: left;
+    min-width: 550px;
+    margin-left: 20px
+}
+
+.searchBar .searchBar-btns {
+    display: inline-block;
+    text-align: left;
+    margin-right: 20px;
+    margin-top: 10px
+}
+
+.searchBar .searchBar-btns>button {
+    padding: 0 5px;
+}
+
+
+/* 提示消息条 */
+
+.alert-box,
+.tipBox {
+    display: flex;
+    border: 1px solid #d2eafb;
+    background-color: #ecf6fd;
+    margin: 0 0 5px;
+    padding: 5px 10px;
+    align-items: center
+}
+
+
+/* 提示消息条 */
+
+.tips-line {
+    border: 1px solid #d2eafb;
+    background-color: #ecf6fd;
+    /* background-color: #00CACA; */
+    /* color: #eee; */
+    margin: 0 0 5px;
+    padding: 5px 10px;
+}
+
+.alert-box>.layui-icon-tips {
+    color: #1E9FFF;
+}
+
+.tipBox * {
+    display: inline-block !important;
+}
+
+.tipBox>.tipBox-info {
+    flex: 1;
+    text-align: left;
+}
+
+.tipBox>.tipBox-operation {
+    flex: none;
+    text-align: right;
+}
+
+.alert-box-button {
+    color: #fff;
+    background-color: #108ee9;
+    border-color: #108ee9;
+}
+
+.alert-box-button:hover {
+    color: #fff
+}
+
+.alert-box .icon-info,
+.tipBox .icon-info {
+    color: #1E9FFF;
+    font-size: 20px;
+}
+
+.tipBox .tipBox-item {
+    margin-left: 10px
+}
+
+
+/* 自定义 卡片在body中的间距 */
+
+.my-card__body {
+    margin: -5px;
+}
+
+
+/* 自定义 卡片中其他元素的 杨样式 */
+
+
+/* 自定义 alert-box 与顶部间距 */
+
+.my-card__body .alert-box {
+    margin-top: -5px;
+}
+
+
+/* table 的间隔 */
+
+.my-card__body .tablemultiline {
+    padding: 0 5px 5px;
+    /* overflow-y:hidden !important; */
+}
+
+.my-text__normal {
+    color: #1E9FFF;
+    /* font-weight: bold; */
+    background-color: transparent;
+}
+
+.mtui-fg-danger,
+.my-text__danger {
+    color: #FF5722;
+    /* !important  会影响其他的hover 显示效果*/
+    /* font-weight: bold; */
+    background-color: transparent;
+}
+
+.my-bg__warning {
+    background-color: #FF5722;
+}
+
+
+.mtui-fg-default {
+    color: #07C160;
+    /* font-weight: bold; */
+    background-color: transparent;
+}
+
+
+.my-bg__pass {
+    background-color: #07C160;
+}
+
+.my-text__yellowWarning,
+.my-text__warm {
+    color: #FFB800;
+    /* font-weight: bold; */
+    background-color: transparent;
+}
+
+.my-color__turquoise {
+    color: #CCFF99;
+    /* font-weight: bold; */
+    background-color: transparent;
+}
+
+.my-bg__turquoise {
+    background-color: #CCFF99;
+    /* font-weight: bold; */
+}
+
+.my-color__violet {
+    color: #CC3399FF;
+    /* font-weight: bold; */
+    background-color: transparent;
+}
+
+.my-bg__violet {
+    background-color: #CC3399FF;
+}
+
+.my-bg__993399 {
+    background-color: #993399;
+    color: #fff;
+}
+
+
+/* 操作控制动态隐藏类 */
+
+.my-permission__refuse .my-btn__permission {
+    display: none;
+}
+
+
+/* 垂直滚动 */
+
+div.my-scroll__y {
+    position: relative;
+    overflow-y: auto !important;
+}
+
+
+/* shadow */
+
+.my-card__shadow {
+    background-color: transparent !important;
+    -webkit-box-shadow: 1px 1px 5px rgb(200, 200, 200, .8) !important;
+    -moz-box-shadow: 1px 1px 5px rgba(200, 200, 200, .8) !important;
+    box-shadow: 1px 1px 5px rgba(200, 200, 200, .8) !important;
+}
+
+.my-label__big {
+    margin-left: -20px;
+    width: 100px;
+}
+
+
+/* 开单页 table css */
+
+.open-order {
+    padding: 10px;
+}
+
+.open-order .open-order .layui-table td,
+.open-order .layui-table th,
+.open-order .layui-table-col-set,
+.open-order .layui-table-fixed-r,
+.open-order .layui-table-grid-down,
+.open-order .layui-table-header,
+.open-order .layui-table-page,
+.open-order .layui-table-tips-main,
+.open-order .layui-table-tool,
+.open-order .layui-table-total,
+.open-order .layui-table-total td,
+.open-order .layui-table-view,
+.open-order .layui-table[lay-skin=line],
+.open-order .layui-table[lay-skin=row] {
+    border-color: #aaa;
+}
+
+.my-sticky__bottom {
+    position: sticky;
+    position: -webkit-sticky;
+    bottom: 0
+}
+
+.my-sticky__top {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0
+}
+
+.my-profit__title {
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: bolder;
+}
+
+.my-profit__value {
+    color: darkred;
+}
+
+.my-a__btn {
+    color: #1E9FFF;
+    cursor: pointer;
+    background: transparent;
+}
+
+.my-input__read {
+    border: none;
+    background: transparent;
+    color: #393D49;
+}
+
+.my-text__decoration {
+    text-decoration-line: underline;
+    color: #1E9FFF;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.detail-header {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.detail-header>.detail-title {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    -ms-word-wrap: break-word;
+}
+
+.detail-header>.detail-btns {
+    flex: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    -ms-word-wrap: break-word;
+    padding-left: 5px;
+}
+
+.layui-btn-group.detail-btns .layui-btn-primary:first {
+    border-left: 1px solid rgba(0, 0, 0, .5) !important;
+}
+
+.detail-hearder-btns>button {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.detail-item {
+    margin-right: 10px;
+    display: inline-block;
+    min-width: 200px;
+}
+
+.mycard {
+    margin: -5px -5px 10px;
+}
+
+.filtertable-number-item.layui-this {
+    color: #06ae56;
+}
+
+.layer_notice {
+    float: left;
+    height: 75px;
+    width: 330px;
+    overflow: hidden;
+    background-color: #5FB878;
+    padding: 10px;
+    height: auto !important;
+    white-space: normal;
+    word-wrap: break-word;
+    color: #fff;
+}
+
+.my-border__color {
+    color: #ccc;
+}
+
+.layuiMobile .tablemultiline {
+    display: none !important;
+}
+
+.layuiMobile-table {
+    display: none !important;
+}
+
+.layuiMobile .layuiMobile-table {
+    display: unset !important;
+}
+
+.layuiMobile-page {
+    display: none;
+}
+
+.layuiMobile .layuiMobile-page {
+    display: unset !important;
+}
+
+.layuiMobile .my-page {
+    display: none !important;
+}
+
+.layuiMobile-table .layui-table-body.layui-table-main {
+    overflow-y: auto !important;
+}
+
+.layuiMobile-table .layui-table-cell {
+    height: auto !important;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+
+/* 补充 weui grid 效果 */
+
+.my-grid {
+    color: rgb(0, 192, 238);
+    text-align: center;
+    font-size: 14px;
+    white-space: nowrap;
+    padding: 50px 10px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.my-hover:hover {
+    background-color: #4cc9f0;
+    -webkit-box-shadow: 10px 10px 99px 6px rgba(76, 201, 240, 1);
+    -moz-box-shadow: 10px 10px 99px 6px rgba(76, 201, 240, 1);
+    box-shadow: 10px 10px 99px 6px rgba(76, 201, 240, 1);
+    color: #FFF !important;
+    border: 0;
+}
+
+
+/* 补充 weuix grid large 效果 */
+
+.grids-large .grid {
+    width: 50%;
+    padding: 20px 10px;
+    display: inline-block;
+}
+
+.fly-mid {
+    display: inline-block;
+    width: 1px;
+    margin: 0 10px;
+    vertical-align: middle;
+    background-color: #e2e2e2;
+}
+
+.my-search__bgcolor {
+    background-color: rgb(248, 248, 248);
+    margin-bottom: 10px;
+}
+
+.big_card_boss {
+    height: 270px
+}
+
+.big_card_boss_filter {
+    height: 450px
+}
+
+
+/* 定义table 行末尾的工具栏按钮的尺寸 */
+
+.mttable-row-bar {
+    text-align: left;
+}
+
+.mttable-row-bar button {
+    width: 80px;
+}
+
+.mttable-row-bar div {
+    margin: 5px;
+}
+
+
+.layui-btn-container .iconfont,
+.layui-btn-container .layui-icon,
+.layui-btn-group .iconfont,
+.layui-btn-group .layui-icon
+{
+    font-size: 16px;
+}
+
+
+/*  自定义样式 2023年8月4日  这个要保存 */
+
+.layui-layer-content [tailwind]{
+    height:100%;
+}
+/* has 可能不存在 */
+.layui-layer-content:has(>div[tailwind]){
+    background-color:rgb(242, 242, 242);;
+    padding:0;
+}
+
+[tailwind] .select-input .select-input-content{
+    margin:unset;
+    width:unset;
+}

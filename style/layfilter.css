@@ -1,0 +1,51 @@
+.filtertable{
+    width: 100%;
+    border-spacing: 2px;
+    border-collapse: inherit;
+}
+.filtertable td {
+    border: solid 1px #cccccc;
+    border-collapse: collapse;
+}
+.filtertable .item-title{
+    text-align: center;
+    background-color: #eeeeee;
+    /* min-width: 100px; */
+	width: 100px;
+}
+.filtertable .items {
+    padding-left: 10px;
+}
+.filtertable td .layfilter-ul li{
+    float: left;
+    display: inline;
+    margin: 4px;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.filtertable td .layfilter-ul .layfilter-item a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding-left: 2px;
+    border: solid 1px;
+    border-color: transparent!important;
+    border-color: #ffffff;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.filtertable td .layfilter-ul .layfilter-item-checked a:hover{
+	/* background-image: url(images/filterCloseHover.gif); */
+}
+.filtertable td .layfilter-ul .layfilter-item-checked a{
+    width: 100%;
+    border: solid 0px #009E94!important;
+    color:#FF0000;
+    /* background-image: url(images/filterClose.gif); */
+    background-repeat: no-repeat;
+    background-position: 98% 40%;
+
+    
+}

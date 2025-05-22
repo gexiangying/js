@@ -1,0 +1,17 @@
+
+/*
+	Author: Sun JinYang
+	Descript: mtdaterange.css mtdaterange style sheet。 
+*/
+
+/*主样式*/
+.mtdaterange {
+  display:inline-block;
+}
+
+
+.mtui-daterange-item{
+  width:120px;
+  margin: 0 10px;
+}
+

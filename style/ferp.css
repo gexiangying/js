@@ -215,44 +215,77 @@ body {
   background: #fff
 }
 
-.ferp-fg-danger,
-.ferp-bg-danger {
+.ferp-fg-danger{
   color: #fa5151;
   color: var(--ferp-RED);
 }
+.ferp-bg-danger {
+  background-color: #fa5151;
+  background-color: var(--ferp-RED);
+  color:whitesmoke
+}
 
 
-.ferp-fg-normal,
-.ferp-bg-normal {
+.ferp-fg-normal{
   color: #1196ff;
   color: var(--ferp-INDIGO);
 }
+.ferp-bg-normal {
+  background-color: #1196ff;
+  background-color: var(--ferp-INDIGO);
+  color:whitesmoke
+}
 
-.ferp-fg-default,
-.ferp-bg-default {
+.ferp-fg-default{
   color: #07c160;
   color: var(--ferp-BRAND);
 }
 
-.ferp-fg-primary,
-.ferp-bg-primary {
+.ferp-bg-default {
+  background-color: #07c160;
+  background-color: var(--ferp-BRAND);
+  color:whitesmoke
+}
+
+.ferp-fg-primary{
   color: #666;
   color: var(--ferp-PRIMARY);
 }
+.ferp-bg-primary {
+  background-color: #666;
+  background-color: var(--ferp-PRIMARY);
+  color:whitesmoke
+}
 
 .ferp-fg-warning,
-.ferp-fg-warm,
-.ferp-bg-warning,
-.ferp-bg-warm {
+.ferp-fg-warm{
   color: #cc9c00;
   color: var(--ferp-YELLOW);
+  color:whitesmoke
+}
+
+.ferp-bg-warning,
+.ferp-bg-warm {
+  background-color: #cc9c00;
+  background-color: var(--ferp-YELLOW);
+  color:whitesmoke
+}
+
+.ferp-bg-move {
+  background-color:  #c87d2f;
+  background-color:  var(--ferp-ORANGE);
+  color:whitesmoke
+}
+
+.ferp-fg-move,
+.ferp-fg-orange {
+  color: #c87d2f;
+  color: var(--ferp-ORANGE);
 }
 
 
-.ferp-fg-move,
-.ferp-bg-move {
-  color: #c87d2f;
-  color: var(--ferp-ORANGE);
+.ferp-bg-grey {
+  background-color:rgb(237,237,237);
 }
 
 /* link  */
@@ -313,10 +346,42 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 0 10px;
+  min-height: 30px;
+  
+  position: relative;
+  /* overflow: hidden;  设置它会导致筛选列显示不全 */
 }
 
 .ferp-table-tool-temp {
-  padding-right: 120px
+  left:0;
+  top:0;
+  padding-right: 120px;
+  flex:auto;
+  overflow: hidden;
+}
+.ferp-table-tool-temp button{
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  min-width: 60px;
+}
+
+.ferp-table-tool-temp  .layui-btn-container {
+  display: flex;
+  overflow: auto;  
+  touch-action: auto;
+}
+
+.ferp-table-tool-temp  .layui-btn-container::-webkit-scrollbar {
+  height: 6px
+}
+
+.ferp-table-tool-temp  .layui-btn-container::-webkit-scrollbar-thumb {
+  background: #888
+}
+
+.ferp-table-tool-temp  .layui-btn-container::-webkit-scrollbar-thumb:hover {
+  background: #555
 }
 
 
@@ -325,28 +390,45 @@ body {
   /* top: 10px; */
   padding: 5px;
   font-size: 16px;
-
-  position: absolute;
-  right: 17px;
-  top: 10px
+  right:0;
+  top:0;
+  position: relative;
+  min-width: fit-content;
 }
 
-/* .layui-table-tool-self {
-  position: absolute;
-  right: 17px;
-  top: 10px
-} */
+
+
+
 
 .ferp-table-tool .ferp-table-tool-self .layui-inline[event] {
   margin: 0 auto;
 }
 
-.ferp-table-tool .ferp-table-tool-self .layui-table-tool-panel {
+.ferp-table-tool .ferp-table-tool-self .ferp-table-tool-panel {
   left: auto;
-  right: -1px
+  right: 5px;
+  position:absolute;
+  /* height:inherit */
+
+
 }
 
+.ferp-table-tool-panel {
+  z-index: 500;
+  /* position: absolute; */
+  position: fixed;
 
+  /* top: 29px; */
+  left: -1px;
+  padding: 5px 0 5px 10px;
+  min-width: 150px;
+  min-height: 40px;
+  border: 1px solid #d2d2d2;
+  text-align: left;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12);
+}
 
 /* dpage 详情页布局 */
 .ferp-page {
@@ -482,11 +564,12 @@ body {
   color: #f0f;
 }
 
+
 .ferp-footer {
   background-color: rgb(242, 239, 239);
 }
 
-.ferp-footer .layui-layer-btn0{
-  width: 80px;
-  display: unset;
+
+.ferp-form-maxwidth{
+  max-width: 800px;
 }

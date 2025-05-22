@@ -1,0 +1,187 @@
+/*
+ * Author: Sun JinYang
+ * Descript:  mtlaytablefilter 样式文件
+ */
+
+
+.mtpagedetail {
+    padding: 0;
+}
+
+.mtpagedetail-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.mtpagedetail-title {
+    color: #10aeff;
+    color: var(--mtui-BLUE);
+    /* font-weight: bold; */
+
+
+    min-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.mtpagedetail-toolbar {
+    padding: 0 0 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+
+}
+
+/*  mtpagedetail-btn 样式 */
+.mtpagedetail-toolbar>.mtpagedetail-btn {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 10px;
+    margin: 5px 0;
+
+    border: 1px solid transparent;
+    border-radius: 0;
+    border-color: #d2d2d2;
+
+
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+
+    /* 
+    color: #666; */
+    background: 0 0;
+    color: #666;
+
+    /* 文本不可选中 */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+
+    pointer-events: all; 
+}
+
+.mtpagedetail-toolbar >.mtpagedetail-btn:hover {
+
+
+    color: #10aeff;
+    color: var(--mtui-BLUE);
+    border-color: #10aeff;
+    border-color: var(--mtui-BLUE);
+}
+
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-default {
+
+  
+    color: #06ae56;
+    color: var(--mtui-TEXTGREEN);
+    background-color: #f2f2f2;
+    background-color: var(--mtui-BTN-DEFAULT-BG);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-default:not(.mtpagedetail-btn-disabled):visited {
+    color: #06ae56;
+    color: var(--mtui-TEXTGREEN);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-default:not(.mtpagedetail-btn-disabled):active {
+    background-color: #e6e6e6;
+    background-color: var(--mtui-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-default:not(.mtpagedetail-btn-disabled):hover {
+    background-color: #06ae56;
+    background-color: var(--mtui-TEXTGREEN);
+    color: #fff;
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-normal {
+
+  
+    color: #10aeff;
+    color: var(--mtui-BLUE);
+    background-color: #f2f2f2;
+    background-color: var(--mtui-BTN-DEFAULT-BG);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-normal:not(.mtpagedetail-btn-disabled):visited {
+    color: #10aeff;
+    color: var(--mtui-BLUE);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-normal:not(.mtpagedetail-btn-disabled):active {
+    background-color: #e6e6e6;
+    background-color: var(--mtui-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-normal:not(.mtpagedetail-btn-disabled):hover {
+    background-color: #10aeff;
+    background-color: var(--mtui-BLUE);
+    color: #fff;
+}
+
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-warn {
+    color: #fa5151;
+    color: var(--mtui-RED);
+    background-color: #f2f2f2;
+    background-color: var(--mtui-BTN-DEFAULT-BG);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-warn:not(.mtpagedetail-btn-disabled):visited {
+    color: #fa5151;
+    color: var(--mtui-RED);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-warn:not(.mtpagedetail-btn-disabled):active {
+    background-color: #e6e6e6;
+    background-color: var(--mtui-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-warn:not(.mtpagedetail-btn-disabled):hover {
+    background-color: #fa5151;
+    background-color: var(--mtui-RED);
+    color: #fff;
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-warm {
+
+    color: #ffc300;
+    color: var(--mtui-YELLOW);
+    background-color: #f2f2f2;
+    background-color: var(--mtui-BTN-DEFAULT-BG);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-warm:not(.mtpagedetail-btn-disabled):visited {
+    color: #ffc300;
+    color: var(--mtui-YELLOW);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-warm:not(.mtpagedetail-btn-disabled):active {
+    background-color: #e6e6e6;
+    background-color: var(--mtui-BTN-DEFAULT-ACTIVE-BG);
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-warm:not(.mtpagedetail-btn-disabled):hover {
+    background-color: #ffc300;
+    background-color: var(--mtui-YELLOW);
+    color: #fff;
+}
+
+.mtpagedetail-toolbar>.mtpagedetail-btn-disabled {
+    color: rgba(0, 0, 0, 0.2);
+    color: var(--mtui-BTN-DISABLED-FONT-COLOR);
+    background-color: #f2f2f2;
+    background-color: var(--mtui-BTN-DEFAULT-BG);
+}

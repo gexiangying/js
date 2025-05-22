@@ -1,0 +1,79 @@
+#steps{
+    /* margin-left: 20px; */
+}
+.step-item {
+    display: inline-block;
+    line-height: 26px;
+    position: relative;
+    background:transparent;
+}
+
+.step-item-tail {
+    width: 100%;
+    padding: 0 10px;
+    position: absolute;
+    /* position: relative; */
+    left: 0;
+    top: 13px;
+}
+
+.step-item-tail i {
+    display: inline-block;
+    width: 90%; 
+    /* 原宽度时 100%  */
+    height: 1px;
+    vertical-align: top;
+    background: #c2c2c2;
+    position: absolute;
+    /* position: relative; */
+}
+.step-item-tail-done {
+    background: #009688 !important;
+}
+
+.step-item-head {
+    position: relative;
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    text-align: center;
+    vertical-align: top;
+    color: #009688;
+    border: 1px solid #009688;
+    border-radius: 50%;
+    background:transparent;
+}
+
+.step-item-head.step-item-head-active {
+    background: #fff;
+    color: #000;
+}
+
+.step-item-main {
+    background: transparent;
+    display: block;
+    position: relative;
+}
+
+.step-item-main-title {
+    font-weight: bolder;
+    color: #555555;
+}
+.step-item-main-desc {
+    color: #aaaaaa;
+}
+
+.step-item-head.step-item-head-current {
+    background: #FF5722;
+    color: #ffffff;
+}
+
+.step-item-head.step-item-head-finish {
+    background: #009688;
+    color: #ffffff;
+}
+
+.step-item-head.step-item-head-edit {
+    background: #FF5722;
+    color: #ffffff;
+}

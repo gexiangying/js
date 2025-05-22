@@ -1,0 +1,42 @@
+
+/** 
+ * tablemultiline .css 
+ */
+ 
+
+.tablemultiline .layui-table thead tr,
+.tablemultiline .layui-table[lay-even] tr:nth-child(even) {
+  background-color: rgb(244,244,244) !important;
+  /* color: #fff; */
+  /* font-weight: bold; */
+}
+
+.tablemultiline .layui-table-cell {
+  height: auto !important;
+  white-space: normal
+}
+
+
+.tablemultiline .tool-item {
+  margin:0;
+  text-align:left;
+  
+}
+
+.tablemultiline .tool-item >a{
+  border:none;
+  text-decoration: none;
+  border-bottom: 1px solid;
+
+  color:#1E9FFF
+}
+
+.tablemultiline a.disabled {
+  border: none;   
+  color:rgb(218,218,218);   
+
+}
+
+
+
+

@@ -1,0 +1,33 @@
+/*
+ * Author: Sun JinYang
+ * Descript:  mtlaytablefilter 样式文件
+ */
+
+
+.mtlaytablefilter{
+
+}
+
+.mtlaytablefilter-bar{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mtlaytablefilter-bar > input {
+    width:300px;
+}
+
+.mtlaytablefilter-bar > button {
+   margin-left: 5px;
+}
+
+.mtlaytablefilter-more {
+    margin: 10px 0 0 ;
+    padding: 10px 20px 0 0;
+    /* background-color: #ededed;
+    background-color: var(--mtui-BG-0); */
+}
+

@@ -1,0 +1,29 @@
+/*
+ * Author: Sun JinYang
+ * Descript:  mtfilter 样式文件
+ */
+
+
+.mtui-filter{
+ /* padding:10px 0; */
+}
+
+.mtui-filter-box{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mtui-filter-box > input {
+  width:200px 
+}
+.mtui-filter-box > input  + * {
+  margin-left:10px
+}
+
+.mtui-filter-box + .mtui-filter-more{
+  margin:10px 0 0;
+}
+

@@ -1,0 +1,40 @@
+
+.mtui-tips{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d2eafb;
+    background-color: #ecf6fd;
+    margin: 0 0 5px;
+    padding: 5px 10px;
+    align-items: center
+}
+
+.mtui-tips-summary{
+}
+
+.mtui-tips-summary .layui-icon-tips{
+    color:#1E9FFF;font-weight: bold;
+}
+
+.mtui-tips-summary span {
+    margin-left:10px;
+    display:inline-block;
+}
+.mtui-tips-toolbar > *{
+    margin-right:-30px;
+    font-size: 18px;
+
+    color: #10aeff;
+    color: var(--weui-BLUE);
+}
+
+.mtui-tips-toolbar > *:hover{
+    color: #07c160;
+    color: var(--mtui-BRAND);
+}
+
+.mtui-tips-toolbar > *:last-child{
+    margin-right:-10px;
+}

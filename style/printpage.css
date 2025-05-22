@@ -1,0 +1,51 @@
+/**
+ * @Author: Sun Jinyang
+ * @description: printpage 样式
+**/
+
+/* 主类 */
+.mtui-printpage {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+/* 打印区域 */
+.mtui-printpage .mtui-printpage-print{
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
+    background-color:var(--mtui-WHITE);
+}
+
+.mtui-printpage .mtui-printpage-print .layui-table, .layui-table-view{
+   margin:0;
+}
+
+/* 信息提示区域 */
+.mtui-printpage .mtui-printpage-tips{
+   height: 40px;
+   line-height: 40px;
+}
+
+/* 工具行 */
+.mtui-printpage .mtui-printpage-toolbar{
+    height: 40px;
+    line-height: 40px;
+}
+
+
+.mtui-printpage .layui-table {
+    
+}
+

@@ -1,0 +1,12 @@
+/* 补充样式文件 */
+
+.handsontable .odd  {
+background:  rgba(213, 223, 246, 0.3) 
+}
+.handsontable .even  {
+background: #fff 
+}
+.handsontable a:hover{
+color: #07c160;
+}
+

@@ -1,0 +1,68 @@
+/*
+ * Author: Sun JinYang
+ * Descript:  mtlaytablefilter 样式文件
+ */
+
+
+.mtpcorders{
+    padding:10px 0 0;
+}
+
+.mtpcorders-bar{
+    
+}
+.mtpcorders-bar + *{
+    margin-top:5px;
+}
+
+.mtpcorders-bar .layui-mutexbtns{
+    float:left;
+    padding:0 10px;
+}
+
+
+.mtpcorders-bar .layui-mutexbtns + .mtlaytablefilter  .mtlaytablefilter-bar {
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+
+.mtpcorders-summary{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d2eafb;
+    background-color: #ecf6fd;
+    margin: 0 0 5px;
+    padding: 5px 10px;
+    align-items: center
+}
+
+.mtpcorders-summary-items{
+}
+
+.mtpcorders-summary-items .layui-icon-tips{
+    color:#1E9FFF;font-weight: bold;
+}
+
+.mtpcorders-summary-items span {
+    margin-left:10px;
+    display:inline-block;
+}
+.mtpcorders-summary-btns > *{
+    margin-right:-30px;
+    font-size: 18px;
+
+    color: #10aeff;
+    color: var(--weui-BLUE);
+}
+
+.mtpcorders-summary-btns > *:hover{
+    color: #07c160;
+    color: var(--mtui-BRAND);
+}
+
+.mtpcorders-summary-btns > *:last-child{
+    margin-right:0;
+}
