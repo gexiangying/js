@@ -1,0 +1,492 @@
+
+body {
+  --ferp-BTN-DISABLED-FONT-COLOR: rgba(0, 0, 0, 0.2);
+}
+
+body[data-weui-theme='dark'] {
+  --ferp-BTN-DISABLED-FONT-COLOR: rgba(255, 255, 255, 0.2);
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-weui-theme='light']) {
+    --ferp-BTN-DISABLED-FONT-COLOR: rgba(255, 255, 255, 0.2);
+  }
+}
+
+body {
+  --ferp-BTN-DEFAULT-BG: #f2f2f2;
+}
+
+body[data-weui-theme='dark'] {
+  --ferp-BTN-DEFAULT-BG: rgba(255, 255, 255, 0.08);
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-weui-theme='light']) {
+    --ferp-BTN-DEFAULT-BG: rgba(255, 255, 255, 0.08);
+  }
+}
+
+body {
+  --ferp-BTN-DEFAULT-COLOR: #06ae56;
+}
+
+body[data-weui-theme='dark'] {
+  --ferp-BTN-DEFAULT-COLOR: rgba(255, 255, 255, 0.8);
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-weui-theme='light']) {
+    --ferp-BTN-DEFAULT-COLOR: rgba(255, 255, 255, 0.8);
+  }
+}
+
+body {
+  --ferp-BTN-DEFAULT-ACTIVE-BG: #e6e6e6;
+}
+
+body[data-weui-theme='dark'] {
+  --ferp-BTN-DEFAULT-ACTIVE-BG: rgba(255, 255, 255, 0.126);
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-weui-theme='light']) {
+    --ferp-BTN-DEFAULT-ACTIVE-BG: rgba(255, 255, 255, 0.126);
+  }
+}
+
+
+/* 颜色变量*/
+body {
+  --ferp-BG-0: #ededed;
+  --ferp-BG-1: #f7f7f7;
+  --ferp-BG-2: #fff;
+  --ferp-BG-3: #f7f7f7;
+  --ferp-BG-4: #4c4c4c;
+  --ferp-BG-5: #fff;
+  --ferp-FG-0: rgba(0, 0, 0, 0.9);
+  --ferp-FG-HALF: rgba(0, 0, 0, 0.9);
+  --ferp-FG-1: rgba(0, 0, 0, 0.5);
+  --ferp-FG-2: rgba(0, 0, 0, 0.3);
+  --ferp-FG-3: rgba(0, 0, 0, 0.1);
+  --ferp-FG-4: #4c4c4c80;
+  --ferp-RED: #fa5151;
+  --ferp-ORANGE: #fa9d3b;
+  --ferp-YELLOW: #ffc300;
+  --ferp-GREEN: #91d300;
+  --ferp-LIGHTGREEN: #95ec69;
+  --ferp-BRAND: #07c160;
+  --ferp-BLUE: #10aeff;
+  --ferp-INDIGO: #1485ee;
+  --ferp-PURPLE: #6467f0;
+  --ferp-WHITE: #fff;
+  --ferp-LINK: #576b95;
+  --ferp-LINK-ACTIVE: rgba(87, 107, 149, 0.5);
+  --ferp-TEXTGREEN: #06ae56;
+  --ferp-FG: black;
+  --ferp-BG: white;
+  --ferp-TAG-TEXT-ORANGE: #fa9d3b;
+  --ferp-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+  --ferp-TAG-TEXT-GREEN: #06ae56;
+  --ferp-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+  --ferp-TAG-TEXT-BLUE: #10aeff;
+  --ferp-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+  --ferp-TAG-TEXT-BLACK: rgba(0, 0, 0, 0.5);
+  --ferp-TAG-BACKGROUND-BLACK: rgba(0, 0, 0, 0.05);
+  /* TODO: 其他主题下的颜色值 */
+  --ferp-PRIMARY: #666;
+
+  --ferp-BG-HOVER: rgba(16, 174, 255, 0.1);
+
+}
+
+@media (prefers-color-scheme:dark) {
+  body:not([data-ferp-theme='light']) {
+    --ferp-BG-0: #111111;
+    --ferp-BG-1: #1e1e1e;
+    --ferp-BG-2: #191919;
+    --ferp-BG-3: #202020;
+    --ferp-BG-4: #404040;
+    --ferp-BG-5: #2c2c2c;
+    --ferp-FG-0: rgba(255, 255, 255, 0.8);
+    --ferp-FG-HALF: rgba(255, 255, 255, 0.6);
+    --ferp-FG-1: rgba(255, 255, 255, 0.5);
+    --ferp-FG-2: rgba(255, 255, 255, 0.3);
+    --ferp-FG-3: rgba(255, 255, 255, 0.05);
+    --ferp-FG-4: #40404080;
+    --ferp-RED: #fa5151;
+    --ferp-ORANGE: #c87d2f;
+    --ferp-YELLOW: #cc9c00;
+    --ferp-GREEN: #74a800;
+    --ferp-LIGHTGREEN: #3eb575;
+    --ferp-BRAND: #07c160;
+    --ferp-BLUE: #10aeff;
+    --ferp-INDIGO: #1196ff;
+    --ferp-PURPLE: #8183ff;
+    --ferp-WHITE: rgba(255, 255, 255, 0.8);
+    --ferp-LINK: #7d90a9;
+    --ferp-LINK-ACTIVE: rgba(125, 144, 169, 0.5);
+    --ferp-TEXTGREEN: #259c5c;
+    --ferp-FG: white;
+    --ferp-BG: black;
+    --ferp-TAG-TEXT-ORANGE: rgba(250, 157, 59, 0.6);
+    --ferp-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+    --ferp-TAG-TEXT-GREEN: rgba(6, 174, 86, 0.6);
+    --ferp-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+    --ferp-TAG-TEXT-BLUE: rgba(16, 174, 255, 0.6);
+    --ferp-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+    --ferp-TAG-TEXT-BLACK: rgba(255, 255, 255, 0.5);
+    --ferp-TAG-BACKGROUND-BLACK: rgba(255, 255, 255, 0.05);
+  }
+}
+
+body[data-ferp-theme='dark'] {
+  --ferp-BG-0: #111111;
+  --ferp-BG-1: #1e1e1e;
+  --ferp-BG-2: #191919;
+  --ferp-BG-3: #202020;
+  --ferp-BG-4: #404040;
+  --ferp-BG-5: #2c2c2c;
+  --ferp-FG-0: rgba(255, 255, 255, 0.8);
+  --ferp-FG-HALF: rgba(255, 255, 255, 0.6);
+  --ferp-FG-1: rgba(255, 255, 255, 0.5);
+  --ferp-FG-2: rgba(255, 255, 255, 0.3);
+  --ferp-FG-3: rgba(255, 255, 255, 0.05);
+  --ferp-FG-4: #40404080;
+  --ferp-RED: #fa5151;
+  --ferp-ORANGE: #c87d2f;
+  --ferp-YELLOW: #cc9c00;
+  --ferp-GREEN: #74a800;
+  --ferp-LIGHTGREEN: #3eb575;
+  --ferp-BRAND: #07c160;
+  --ferp-BLUE: #10aeff;
+  --ferp-INDIGO: #1196ff;
+  --ferp-PURPLE: #8183ff;
+  --ferp-WHITE: rgba(255, 255, 255, 0.8);
+  --ferp-LINK: #7d90a9;
+  --ferp-LINK-ACTIVE: rgba(125, 144, 169, 0.5);
+  --ferp-TEXTGREEN: #259c5c;
+  --ferp-FG: white;
+  --ferp-BG: black;
+  --ferp-TAG-TEXT-ORANGE: rgba(250, 157, 59, 0.6);
+  --ferp-TAG-BACKGROUND-ORANGE: rgba(250, 157, 59, 0.1);
+  --ferp-TAG-TEXT-GREEN: rgba(6, 174, 86, 0.6);
+  --ferp-TAG-BACKGROUND-GREEN: rgba(6, 174, 86, 0.1);
+  --ferp-TAG-TEXT-BLUE: rgba(16, 174, 255, 0.6);
+  --ferp-TAG-BACKGROUND-BLUE: rgba(16, 174, 255, 0.1);
+  --ferp-TAG-TEXT-BLACK: rgba(255, 255, 255, 0.5);
+  --ferp-TAG-BACKGROUND-BLACK: rgba(255, 255, 255, 0.05);
+
+
+}
+
+/* 字体统一主题 */
+body {
+  /* 字体大小 font-size  从 12px 开始 +4 +6 +8 +10 ...*/
+  --ferp-FS: 22px;
+  /* 有些浏览器最小支持12 */
+  --ferp-FS-XS: 12px;
+  --ferp-FS-SM: 16px;
+  --ferp-FS-BIG: 30px;
+  --ferp-FS-LARGE: 40px;
+  /* 字体粗细 font-weight */
+  --ferp-FW: bold;
+}
+
+
+.ferp-inline {
+  /* 显示内联块 */
+  display: inline-block;
+  /* 垂直居中显示 */
+  vertical-align: middle;
+  /* 相对位置 */
+  position: relative;
+  /* 内联 */
+  *display: inline;
+  *zoom: 1
+}
+
+/* color  */
+.ferp-bg-odd {
+  background: #eee
+}
+
+.ferp-bg-even {
+  background: #fff
+}
+
+.ferp-fg-danger,
+.ferp-bg-danger {
+  color: #fa5151;
+  color: var(--ferp-RED);
+}
+
+
+.ferp-fg-normal,
+.ferp-bg-normal {
+  color: #1196ff;
+  color: var(--ferp-INDIGO);
+}
+
+.ferp-fg-default,
+.ferp-bg-default {
+  color: #07c160;
+  color: var(--ferp-BRAND);
+}
+
+.ferp-fg-primary,
+.ferp-bg-primary {
+  color: #666;
+  color: var(--ferp-PRIMARY);
+}
+
+.ferp-fg-warning,
+.ferp-fg-warm,
+.ferp-bg-warning,
+.ferp-bg-warm {
+  color: #cc9c00;
+  color: var(--ferp-YELLOW);
+}
+
+
+.ferp-fg-move,
+.ferp-bg-move {
+  color: #c87d2f;
+  color: var(--ferp-ORANGE);
+}
+
+/* link  */
+.ferp-link {
+  color: #1196ff;
+  color: var(--ferp-INDIGO);
+  cursor: pointer;
+}
+
+.ferp-link-bline {
+  color: #1196ff;
+  color: var(--ferp-INDIGO);
+  cursor: pointer;
+  padding-bottom: 2px;
+  border-bottom: 1px solid;
+  width: fit-content;
+}
+
+.ferp-cursor-pointer {
+  cursor: pointer;
+}
+
+.ferp-link:hover,
+.ferp-link-bline:hover {
+  color: #07c160;
+  color: var(--ferp-BRAND);
+}
+
+
+.ferp-link-danger {
+  cursor: pointer;
+  color: #fa5151;
+  color: var(--ferp-RED);
+}
+
+.ferp-link-warm {
+  cursor: pointer;
+  color: #cc9c00;
+  color: var(--ferp-YELLOW);
+}
+
+.ferp-link-normal {
+  cursor: pointer;
+  color: #1196ff;
+  color: var(--ferp-INDIGO);
+}
+
+
+/* table */
+.ferp-table-border {
+  border: 1px solid #c5d8f7;
+}
+
+
+.ferp-table-tool {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 10px;
+}
+
+.ferp-table-tool-temp {
+  padding-right: 120px
+}
+
+
+.ferp-table-tool-self {
+  /* right: 17px; */
+  /* top: 10px; */
+  padding: 5px;
+  font-size: 16px;
+
+  position: absolute;
+  right: 17px;
+  top: 10px
+}
+
+/* .layui-table-tool-self {
+  position: absolute;
+  right: 17px;
+  top: 10px
+} */
+
+.ferp-table-tool .ferp-table-tool-self .layui-inline[event] {
+  margin: 0 auto;
+}
+
+.ferp-table-tool .ferp-table-tool-self .layui-table-tool-panel {
+  left: auto;
+  right: -1px
+}
+
+
+
+/* dpage 详情页布局 */
+.ferp-page {
+  margin: 15px;
+  overflow: hidden;
+  background: #FFF;
+  position: relative;
+}
+
+/* 配置奇数行title 背景色 */
+.ferp-page .layui-colla-item > .layui-colla-title {
+  /* H3 */
+  font-size: 18.72px;  
+  /* 禁止选择 */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.ferp-page[lay-even] .layui-colla-item.even > .layui-colla-title {
+  background-color:rgba(213, 223, 246, 0.5) !important;
+}
+
+
+
+/* .ferp-siderbar {
+  position: fixed;
+  right: -160px;
+  bottom: 40%;
+  width: 160px;
+  height:auto;
+  min-height: 300px;
+  background: #009aff30;
+  z-index: 99999999999;
+  transition: all .5s ease;
+}
+
+.ferp-siderbar-menu {
+  padding: 10px 20px 10px 10px;
+  position: fixed;
+  top: 100px;
+  width: 200px;
+}
+
+.ferp-siderbar li {
+  margin-bottom: 1px;
+  padding: 20px;
+  line-height: 30px;
+  font-size: 18px;
+  background: #fff;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+ .ferp-siderbar li.cur {
+  color: #f0f;
+} */
+
+
+.ferp-siderbar {
+  position: fixed;
+  right: -160px;
+  top: 30%;
+  width: 160px;
+  height:400px;
+  background: #009aff80;
+  z-index: 99999999999;
+  transition: all .5s ease;
+}
+
+.ferp-siderbar-hoverbtn {
+  width: 30px;
+  height: 129px;
+  color: white;
+  position: absolute;
+  display: flex;
+  align-items: center; 
+  justify-content: center;          
+
+  cursor: pointer;
+  top: 50%;
+  margin-top: -66px;
+  left: -30px;
+  font-size: 14px;
+}
+
+.ferp-siderbar-hoverbtn::before{
+  content: "";            
+  position: absolute;            
+  left: 0;           
+  right: 0;            
+  top: 0;            
+  bottom: 0;            
+  z-index: -1;           
+  background-color: #1890ff;            
+  transform: perspective(.5em) rotateY(-2deg) ;            
+  box-shadow: 0 0 7px #666;
+}
+
+.ferp-siderbar-menu {
+  width: 186px;
+  height:100%;
+  margin-left: 22px;
+  position: absolute;
+  overflow:hidden;
+  overflow-x:auto;
+  overflow-y: auto;
+  padding:10px auto;
+  top:0;
+}
+
+.ferp-siderbar-menu li{
+  margin-bottom: 1px;
+  cursor: pointer;
+  transition: all .5s;
+  position: relative;
+  margin-top: 10p
+}
+
+.ferp-siderbar-menu li .layui-form-item{
+  margin-bottom: -10px;
+} 
+
+.ferp-siderbar-menu li label.layui-form-mid{
+  cursor: pointer;
+  float:right;
+}
+
+
+
+.ferp-siderbar-menu li.layui-this{
+  color: #f0f;
+}
+
+.ferp-footer {
+  background-color: rgb(242, 239, 239);
+}
+
+.ferp-footer .layui-layer-btn0{
+  width: 80px;
+  display: unset;
+}

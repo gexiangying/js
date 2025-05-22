@@ -1,0 +1,29 @@
+
+
+.layuiMobile-table .layui-input,
+.layuiMobile-table .layui-select,
+.layuiMobile-table .layui-textarea {
+    height: 24px;
+    line-height: 0.8;
+    line-height: 24px\9;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #fff;
+    color: rgba(0, 0, 0, .85);
+    border-radius: 2px
+}
+.layuiMobile-table .layui-label{
+    height: 24px;
+    line-height: 0.8;  
+    line-height: 24px\9;
+    padding:8px 0 ;
+    font-size:12px;
+}
+
+.layuiMobile-table .info-items {
+    text-align: left;
+ }
+
+.layuiMobile-table .info-items  > div{
+   margin-bottom: 2px;
+}
